@@ -54,7 +54,7 @@ class Portfolio extends React.Component {
       params["body"] = JSON.stringify({ tags: tags });
     }
 
-    fetch("https://localhost:3000/api/findvideocases", params).then((res) => {
+    fetch("/api/findvideocases", params).then((res) => {
       if (res.ok) {
         res.text().then((result) => {
           const cases = JSON.parse(result);
