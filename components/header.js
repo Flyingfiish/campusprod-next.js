@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "./Link";
+import Link from "./link";
 import Button from "./button";
 import { withRouter } from "next/router";
 //import { withRouter } from "react-router-dom";
