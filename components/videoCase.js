@@ -24,7 +24,7 @@ class VideoCase extends React.Component {
     if (this.props.bottomPanel)
       return (
         <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data._id}>
-          <a style={{ textDecoration: "none", color: "black" }}>
+          <a title="PortfolioItem" style={{ textDecoration: "none", color: "black" }}>
             <p className="date">27 июля</p>
             <p className="name">{this.props.data.name}</p>
             {this.props.isDescription && (
@@ -78,6 +78,7 @@ class VideoCase extends React.Component {
           <a
             className="showCase"
             style={{ textDecoration: "none", color: "white" }}
+            title="PortfolioItem"
           >
             <p>Посмотреть кейс</p>
             <svg
@@ -152,10 +153,10 @@ class VideoCase extends React.Component {
           >
             {this.video}
           </Modal>
-          <img src={photo}></img>
+          <img alt="videocase cover" src={photo}></img>
           <div className="videocaseContent">
             <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data._id}>
-              <a style={{ textDecoration: "none" }}>
+              <a title="PortfolioItem" style={{ textDecoration: "none" }}>
                 <div className="videoCaseHead">
                   <h3>{this.props.data.name}</h3>
                   <p style={{ marginTop: "25px", color: "lightgray" }}>

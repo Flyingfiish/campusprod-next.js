@@ -46,23 +46,23 @@ class Header extends React.Component {
       >
         <div style={logoStyle} className="logo">
           <Link href="/">
-            <a style={logoStyle}>C A M P U S</a>
+            <a title="logo" style={logoStyle}>C A M P U S</a>
           </Link>
         </div>
         <nav>
           <Link activeClassName="active" href="/">
-            <a className="link">Главная</a>
+            <a title="Home" className="link">Главная</a>
           </Link>
           <Link   exact href="/portfolio">
-            <a style={activeStyle} className="link">
+            <a title="Portfolio" style={activeStyle} className="link">
               <p>Портфолио</p>
             </a>
           </Link>
           <Link activeClassName="active" exact href="/about">
-            <a className="link">О нас</a>
+            <a title="About" className="link">О нас</a>
           </Link>
           <Link activeClassName="active" exact href="/contacts">
-            <a className="link">Контакты</a>
+            <a title="Contacts" className="link">Контакты</a>
           </Link>
         </nav>
         <div className="rightLinks">

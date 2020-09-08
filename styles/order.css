@@ -19,6 +19,7 @@
 
 .blue {
   color: #003cff;
+  font-size: 32px;
 }
 
 .order {
@@ -38,7 +39,7 @@
   align-items: center;
 }
 
-.rightColumn h1 {
+.rightColumn p {
   margin: 0;
   padding: 0;
   font-size: 28px;

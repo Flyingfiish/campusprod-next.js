@@ -261,7 +261,7 @@ class Order extends React.Component {
             onClose={() => this.handleModal()}
           ></Modal>
           <div className="leftColumn">
-            <h1 className="blue">Оставить заявку</h1>
+            <h2 className="blue">Оставить заявку</h2>
             <p>
               За 4 года было реализовано более 100 проектов: рекламные видео,
               музыкальные клипы, дизайны сайтов, оформление социальных сетей.
@@ -328,7 +328,7 @@ class Order extends React.Component {
               backgroundSize: "contain",
             }}
           >
-            <h1>CAMPUS</h1>
+            <p>CAMPUS</p>
           </div>
         </div>
       </div>
