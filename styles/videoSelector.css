@@ -1,0 +1,48 @@
+.controls {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls-arrow {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.video-unselected {
+  display: none;
+}
+
+.controls-arrow svg {
+  width: 30px;
+  padding: 5px;
+}
+
+.left-arrow svg {
+  transform: rotate(180deg);
+}
+
+.controls-arrow:hover {
+  transform: scale3d(1.02, 1.02, 1.02);
+  background: white;
+  color: black;
+}
+
+.controls-arrow:hover #arrow {
+  fill: black;
+}
+#arrow {
+  transition: 300ms;
+}
+
+.disabled {
+  pointer-events: none;
+  color: black;
+}
+
+.disabled #arrow {
+  fill: black;
+}

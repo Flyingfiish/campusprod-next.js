@@ -1,0 +1,45 @@
+.contacts {
+    background-color: black;
+}
+
+.contacts img{
+    opacity: 0.34;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.contacts-info{
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+    color: white;
+}
+
+.contacts-info table{
+    margin-left: 100px;
+}
+
+.contacts-info p{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.contacts h1{
+    position: absolute;
+    z-index: 100;
+    color: white;
+    font-size: 100px;
+    font-weight: 900;
+    margin-top: 210px;
+    margin-left: 642px;
+}
+
+.contacts-info a{
+    text-decoration: none;
+    color: white;
+}
+
+.contacts-links:hover{
+    text-decoration: underline;
+}

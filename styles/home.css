@@ -1,0 +1,79 @@
+.video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.home{
+  position: relative;
+}
+
+.content{
+  margin: 0;
+  padding: 0;
+  margin-top: 6.8vw;
+  width: 62.5%;
+}
+
+.showCases{
+  text-decoration: none;
+  font-size: 15px;
+  color:black;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rightColumn{
+  width: 50%;
+  float: right;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.leftColumn{
+  
+  width: 50%;
+  float:left;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-videoCase .videoCase{
+  height: 23vw;
+}
+
+.left-column-first-videoCase .videoCase{
+  height: 34.2vw;
+}
+
+.standart-video-case .videoCase{
+  height: 17.5vw;
+}
+
+.right-column-first-videoCase .videoCase{
+  height: 20.9vw;
+}
+
+.right-column-second-videoCase .videoCase{
+  height: 30.8vw;
+}
+
+@media screen and (max-width:1020px) {
+  .content{
+    width: 90%;
+  }
+}

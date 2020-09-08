@@ -1,0 +1,114 @@
+.portfolio-head {
+  padding-top: 92px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-head h1 {
+  font-size: 90px;
+  margin: 0;
+}
+
+#works-amount {
+  font-size: 20px;
+  color: #888888;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 62px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.filter * {
+  font-size: 20px;
+  width: auto;
+}
+
+.filter h3 {
+  padding-left: 28px;
+}
+
+.filter table {
+  margin-top: 32px;
+}
+
+.filter table td {
+  margin-right: 60px;
+}
+
+.filter table p {
+  color: #006eff;
+  text-decoration: underline;
+  margin: 0;
+  padding: 10px 24px;
+  border-radius: 5px;
+}
+
+.filter table p:hover {
+  background-color: #e1edfb;
+}
+
+.portfolio-content {
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-videocase {
+  margin-bottom: 20px;
+  margin-left: 24px;
+}
+
+.main-videocase .videoCase-width {
+  width: 64.5vw;
+}
+
+.main-videocase .videoCase {
+  height: 36vw;
+}
+
+.little-videocase {
+  margin-bottom: 20px;
+  margin-left: 24px;
+}
+
+.little-videocase .videoCase-width {
+  width: 31.66vw;
+}
+
+.little-videocase .videoCase {
+  height: 36vw;
+}
+
+@media screen and (max-width: 600px) {
+  .little-videocase {
+    margin: 20px;
+  }
+
+  .little-videocase .videoCase-width {
+    width: 93.7vw;
+  }
+
+  .little-videocase .videoCase {
+    height: 55vw;
+  }
+
+  .main-videocase {
+    margin: 20px;
+  }
+
+  .main-videocase .videoCase-width {
+    width: 93.7vw;
+  }
+
+  .main-videocase .videoCase {
+    height: 100vw;
+  }
+}

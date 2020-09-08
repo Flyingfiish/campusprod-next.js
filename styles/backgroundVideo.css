@@ -1,0 +1,51 @@
+.is_overlay {
+  height: 56.2vw;
+  background-color: black;
+}
+
+#trailer {
+  position: relative;
+  overflow: hidden;
+}
+
+#trailer img {
+  width: 100%;
+  height: 56.2vw;
+}
+
+.kek {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5802521692270659) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.kek h1 {
+  font-size: 5.2vw;
+  font-weight: 900;
+  margin: 5px;
+}
+
+.kek p {
+  font-size: 20px;
+}
+
+.about-text{
+  font-size: 25px;
+  width: 580px;
+  text-align: center;
+  margin-bottom: 160px;
+}

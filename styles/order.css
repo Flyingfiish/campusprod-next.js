@@ -1,0 +1,152 @@
+.order-content {
+  margin: 0;
+  padding: 0;
+  width: 62.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.order-content p {
+  padding-right: 10px;
+  font-size: 25px;
+  line-height: 50px;
+}
+
+.order-content h1 {
+  margin-top: 100px;
+  font-size: 44px;
+}
+
+.blue {
+  color: #003cff;
+}
+
+.order {
+  -webkit-box-shadow: 0px 0px 99px 0px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 0px 99px 0px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 99px 0px rgba(0, 0, 0, 0.13);
+}
+
+.order-form p {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightColumn h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  letter-spacing: 10px;
+  position: relative;
+  color: white;
+}
+
+.order-type-button {
+  margin: 15px 15px 0 0;
+  height: 47px;
+  border: #cccccc solid 2px;
+  border-radius: 24px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #cccccc;
+}
+
+.order-type-button p {
+  width: auto;
+  padding: 0 35px;
+  margin: 0;
+  line-height: 43px;
+  display: flex;
+}
+
+*::selection {
+  background: rgba(0, 0, 0, 0);
+}
+
+.order-type-button:hover {
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.33);
+  transform: scale(1.05);
+}
+
+.checked {
+  background-color: #003cff;
+  color: white;
+  border: #003cff 2px solid;
+}
+
+.checked p {
+  color: white;
+}
+
+.text-field {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.text-field input {
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+}
+
+.text-field label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 2px #707070 solid;
+  color: #CCCCCC;
+}
+
+.text-field label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #41B444;
+  left: 0px;
+  bottom: -2px;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.text-field-content {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+  font-size: 13px;
+}
+
+.text-field input:focus + .text-field-label-name .text-field-content,
+.text-field input:valid + .text-field-label-name .text-field-content {
+  transform: translateY(-140%);
+  
+}
+
+.text-field input:focus + .text-field-label-name::after,
+.text-field input:valid + .text-field-label-name::after {
+  transform: translateX(0%);
+}
+
+.input-fields{
+  margin-top: 50px;
+  margin-right: 15px;
+}

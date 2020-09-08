@@ -1,0 +1,111 @@
+header {
+  color: white;
+  z-index: 9997;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 108px;
+  width: 100%;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  transition: 0.2s;
+}
+
+.scrolled {
+  background: rgba(0, 0, 0, 1);
+}
+
+.makeOrder {
+  color: white;
+  width: 212px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #003CFF;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.makeOrder:hover{
+  transform: scale(1.05);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20.3vw;
+}
+
+.rightLinks {
+  margin-left: 3.46vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.changeLocalization {
+  margin: 0 4.2wv 0 0;
+}
+
+.link {
+  margin-right: 5.2vw;
+  text-decoration: none;
+  font-weight: bold;
+  color: #888888;
+  font-size: 14;
+  padding: 1.5vw 0;
+  transition: 0.2s;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  padding: 30px 0;
+}
+
+.active {
+  color: white;
+  transform: scale(1.05);
+}
+
+.link:hover{
+  color: #d1d1d1;
+  transform: scale(1.05);
+}
+
+.logo:hover{
+  transform: scale(1.3);
+}
+
+@media screen and (max-width: 1400px){
+  nav{
+    margin-left: 15.148vw;
+  }
+
+  .rightLinks{
+    margin-left: 4.844vw;
+  }
+
+  .link{
+    margin-right: 3.878vw;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  nav{
+    margin-left: 10.82vw;
+  }
+
+  .rightLinks{
+    margin-left: 3.46vw;
+  }
+
+  .link{
+    margin-right: 2.77vw;
+  }
+}
+

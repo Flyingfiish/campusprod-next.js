@@ -1,0 +1,146 @@
+.persons-description img {
+  width: 451px;
+}
+
+.person-box {
+  padding: 7.5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.person-box b {
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.person-box p {
+  font-size: 20px;
+  margin-top: 20px;
+  width: 451px;
+}
+
+.persons-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  padding-bottom: 110px;
+}
+
+#person1 {
+  margin-top: 257px;
+}
+
+#person2 {
+  margin-top: 107px;
+}
+
+#person3 {
+  margin-top: 247px;
+}
+
+.first {
+  background: #8800ff;
+  background: -webkit-linear-gradient(bottom right, #8800ff, #154bff);
+  background: -moz-linear-gradient(bottom right, #8800ff, #154bff);
+  background: linear-gradient(to top left, #8800ff, #154bff);
+  color: white;
+}
+
+.first b {
+  margin-left: 353px;
+  font-size: 100px;
+  font-weight: 900;
+  z-index: 1;
+  position: relative;
+}
+
+.first p {
+  font-size: 20px;
+  width: 517px;
+  line-height: 50px;
+  margin-top: 65px;
+  margin-left: 888px;
+  padding-bottom: 168px;
+}
+
+.step-number {
+  color: black;
+  position: absolute;
+  font-size: 308px;
+  font-weight: bold;
+  margin-top: 38px;
+  margin-left: 291px;
+  z-index: 0;
+}
+
+.second-background {
+  width: 100%;
+  opacity: 0.42;
+  position: absolute;
+  z-index: 1;
+}
+
+.second {
+  background-color: black;
+}
+
+.second-step-description {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.second-step-number {
+  padding-top: 126px;
+  font-size: 223px;
+  font-weight: bold;
+  margin-left: 455px;
+}
+
+.second b {
+  font-size: 80px;
+  font-weight: 900;
+  margin-left: 455px;
+  margin-top: -80px;
+}
+
+.second p {
+  font-size: 20px;
+  width: 560px;
+  line-height: 50px;
+  margin-top: 65px;
+  margin-left: 455px;
+  padding-bottom: 200px;
+}
+
+.third b {
+  font-size: 100px;
+  font-weight: 900;
+  margin-left: 353px;
+  position: relative;
+}
+
+.third img {
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 275px;
+}
+
+.third {
+  color: white;
+}
+
+.third p {
+  font-size: 20px;
+  width: 517px;
+  line-height: 50px;
+  margin-top: 65px;
+  margin-left: 888px;
+  padding-bottom: 168px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
