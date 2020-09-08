@@ -1,4 +1,3 @@
-import React from "react";
 import VideoCase from "./videoCase";
 
 const types = [
@@ -55,7 +54,7 @@ class Portfolio extends React.Component {
       params["body"] = JSON.stringify({ tags: tags });
     }
 
-    fetch("http://localhost:3000/api/findvideocases", params).then((res) => {
+    fetch("https://localhost:3000/api/findvideocases", params).then((res) => {
       if (res.ok) {
         res.text().then((result) => {
           const cases = JSON.parse(result);
