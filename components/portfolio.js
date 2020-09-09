@@ -125,15 +125,15 @@ class Portfolio extends React.Component {
     });
     return (
       <div>
-        <div style={{ height: "108px" }}></div>
+        <div className="portfolio-margin" ></div>
         <div
-          style={{ backgroundImage: "url(portfolio-head-back.jpg)" }}
           className="portfolio-head"
         >
           <h1>Портфолио</h1>
           <p id="works-amount">532 работы</p>
+
+          <div className="filter order-form">{variants}</div>
         </div>
-        <div className="filter order-form">{variants}</div>
         {this.getVideoCases()}
       </div>
     );

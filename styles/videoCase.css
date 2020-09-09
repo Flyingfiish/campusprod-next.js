@@ -6,7 +6,6 @@
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.2s ease-out;
-  min-width: 300px;
 }
 
 .videoCase img {
@@ -46,7 +45,6 @@
 }
 
 .videocaseContent {
-  border-radius: 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -133,4 +131,52 @@
 
 .videoCaseHead:hover {
   text-decoration: underline #ccc;
+}
+
+@media screen and (max-width: 850px) {
+  .videoCase {
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+
+  .videoCaseHead h3 {
+    font-size: 10px;
+  }
+
+  .videoCaseHead p {
+    font-size: 7px;
+    display: none;
+  }
+
+  .videoCaseHead {
+    padding: 0;
+  }
+
+  .watchCase {
+    padding: 0;
+    font-size: 7px;
+  }
+
+  .showCase {
+    display: none;
+  }
+
+  .showCase p {
+    font-size: 7px;
+  }
+
+  .videocaseContent {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .date,
+  .description {
+    font-size: 13px;
+  }
+
+  .name {
+    font-size: 17px;
+  }
 }

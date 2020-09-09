@@ -262,14 +262,14 @@ class Order extends React.Component {
           ></Modal>
           <div className="leftColumn">
             <h2 className="blue">Оставить заявку</h2>
-            <p>
+            <p className="order-description">
               За 4 года было реализовано более 100 проектов: рекламные видео,
               музыкальные клипы, дизайны сайтов, оформление социальных сетей.
               Каждую задачу мы решаем осмысленно, и красиво. Для начала работы
               нам надо поговорить. Достаточно указать контакты, и мы свяжемся,
               чтобы все обсудить.
             </p>
-            <p className="blue">
+            <p className="blue order-description">
               Для начала работы нам надо поговорить. Достаточно указать
               контакты, и мы свяжемся, чтобы все обсудить.
             </p>
@@ -297,7 +297,7 @@ class Order extends React.Component {
                 : null}
               <CssTextField
                 id="phone"
-                label="Телефон или любой удобный мессенджер"
+                label="Телефон или мессенджер"
               ></CssTextField>
               {this.state.phoneEmptyError
                 ? this.error(errorTypes.phoneEmpty)
@@ -310,9 +310,9 @@ class Order extends React.Component {
                 ? this.error(errorTypes.clientNameEmpty)
                 : null}
             </div>
-            <div style={{ margin: "50px 0" }}>
+            <div className="makeOrder" style={{ margin: "50px 0" }}>
               <div
-                className="makeOrder"
+                
                 onClick={() => this.handleMakeOrder.call(this)}
               >
                 <Button text="Оставить заявку" fontWeight="500"></Button>
@@ -328,7 +328,7 @@ class Order extends React.Component {
               backgroundSize: "contain",
             }}
           >
-            <p>CAMPUS</p>
+            <b>CAMPUS</b>
           </div>
         </div>
       </div>

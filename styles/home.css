@@ -8,72 +8,89 @@
   padding: 0;
 }
 
-
-
-.home{
+.home {
   position: relative;
 }
 
-.content{
+.content {
   margin: 0;
   padding: 0;
   margin-top: 6.8vw;
   width: 62.5%;
 }
 
-.showCases{
+.showCases {
   text-decoration: none;
   font-size: 15px;
-  color:black;
+  color: black;
   font-weight: 500;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.rightColumn{
+.rightColumn {
   width: 50%;
   float: right;
   padding-left: 10px;
   box-sizing: border-box;
 }
 
-.leftColumn{
-  
+.leftColumn {
   width: 50%;
-  float:left;
+  float: left;
   padding-right: 10px;
   box-sizing: border-box;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.top-videoCase .videoCase{
+.top-videoCase .videoCase {
   height: 23vw;
 }
 
-.left-column-first-videoCase .videoCase{
+.left-column-first-videoCase .videoCase {
   height: 34.2vw;
 }
 
-.standart-video-case .videoCase{
+.standart-video-case .videoCase {
   height: 17.5vw;
 }
 
-.right-column-first-videoCase .videoCase{
+.right-column-first-videoCase .videoCase {
   height: 20.9vw;
 }
 
-.right-column-second-videoCase .videoCase{
+.right-column-second-videoCase .videoCase {
   height: 30.8vw;
 }
 
-@media screen and (max-width:1020px) {
-  .content{
-    width: 90%;
+@media screen and (max-width: 850px) {
+  .leftColumn {
+    padding-right: 2.5px;
+  }
+
+  .rightColumn {
+    padding-left: 2.5px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .content {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .top-videoCase .videoCase{
+    height: 31.25vw;
+  }
+
+  .showCases {
+    display: none;
   }
 }

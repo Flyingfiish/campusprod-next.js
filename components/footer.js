@@ -13,9 +13,9 @@ class Footer extends React.Component {
             <img src="twitter.svg" alt="social"></img>
           </div>
         </div>
-        <div style={{borderBottom:"1px solid white", width: '100%'}}></div>
+        <div className="footer-line" style={{borderBottom:"1px solid white", width: '100%'}}></div>
         <div className="footer-bottom">
-          <p>© CAMPUS Production</p>
+          <p>© 2020 CAMPUS Production</p>
           <p>Политика конфиденциальности</p>
         </div>
       </footer>

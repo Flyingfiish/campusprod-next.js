@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-image: url("../public/portfolio-head-back.jpg");
 }
 
 .portfolio-head h1 {
@@ -63,7 +64,7 @@
 
 .main-videocase {
   margin-bottom: 20px;
-  margin-left: 24px;
+  margin-left: 1vw;
 }
 
 .main-videocase .videoCase-width {
@@ -76,7 +77,7 @@
 
 .little-videocase {
   margin-bottom: 20px;
-  margin-left: 24px;
+  margin-left: 1vw;
 }
 
 .little-videocase .videoCase-width {
@@ -86,8 +87,11 @@
 .little-videocase .videoCase {
   height: 36vw;
 }
+.portfolio-margin {
+  height: 108px;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .little-videocase {
     margin: 20px;
   }
@@ -110,5 +114,71 @@
 
   .main-videocase .videoCase {
     height: 100vw;
+  }
+
+  .portfolio-head {
+    background-image: url("../public/portfolio-mobile-back.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .portfolio-head h1 {
+    font-size: 35px;
+    color: white;
+  }
+
+  .portfolio-head #works-amount {
+    font-size: 9px;
+    color: white;
+  }
+  .portfolio-head .order-type-button p {
+    font-size: 8px;
+    line-height: 20px;
+    padding: 0 10px;
+    color: white;
+  }
+
+  .portfolio-head .order-type-button {
+    height: 24px;
+    border: white solid 2px;
+    margin: 5px 5px 0 0;
+    background: rgba(255, 255, 255, 0.23);
+  }
+
+  .portfolio-head .checked {
+    background-color: white;
+    color: white;
+    border: white 2px solid;
+  }
+
+  .portfolio-head .checked p {
+    color: black;
+  }
+
+  .filter {
+    width: 88%;
+  }
+
+  .portfolio-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-videocase {
+    margin-top: 3.1vw;
+  }
+
+  .little-videocase {
+    margin-top: 3.1vw;
+  }
+
+  .portfolio-margin {
+    height: 90px;
+  }
+
+  .portfolio-content .videoCaseHover{
+    pointer-events: none;
   }
 }

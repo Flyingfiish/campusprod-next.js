@@ -46,56 +46,28 @@ class Home extends React.Component {
       return (
         <div className="content">
           <div className="top-videoCase">
-            <VideoCase
-              data={this.props.cases[0]}
-              paddingTop="36.4%"
-              isMain={true}
-            ></VideoCase>
+            <VideoCase data={this.props.cases[0]} isMain={true}></VideoCase>
           </div>
           <div className="leftColumn">
             <div className="left-column-first-videoCase">
-              <VideoCase
-                data={this.props.cases[1]}
-                paddingTop="110.4%"
-                isMain={false}
-              ></VideoCase>
+              <VideoCase data={this.props.cases[1]} isMain={false}></VideoCase>
             </div>
             <div className="standart-video-case">
-              <VideoCase
-                data={this.props.cases[2]}
-                paddingTop="56.25%"
-                isMain={false}
-              ></VideoCase>
+              <VideoCase data={this.props.cases[2]} isMain={false}></VideoCase>
             </div>
             <div className="standart-video-case">
-              <VideoCase
-                data={this.props.cases[0]}
-                paddingTop="56.25%"
-                isMain={false}
-              ></VideoCase>
+              <VideoCase data={this.props.cases[0]} isMain={false}></VideoCase>
             </div>
           </div>
           <div className="rightColumn">
             <div className="right-column-first-videoCase">
-              <VideoCase
-                data={this.props.cases[1]}
-                paddingTop="67.5%"
-                isMain={false}
-              ></VideoCase>
+              <VideoCase data={this.props.cases[1]} isMain={false}></VideoCase>
             </div>
             <div className="right-column-second-videoCase">
-              <VideoCase
-                data={this.props.cases[2]}
-                paddingTop="99.1%"
-                isMain={false}
-              ></VideoCase>
+              <VideoCase data={this.props.cases[2]} isMain={false}></VideoCase>
             </div>
             <div className="standart-video-case">
-              <VideoCase
-                data={this.props.cases[1]}
-                paddingTop="56.25%"
-                isMain={false}
-              ></VideoCase>
+              <VideoCase data={this.props.cases[1]} isMain={false}></VideoCase>
             </div>
           </div>
         </div>
@@ -119,6 +91,7 @@ class Home extends React.Component {
         <div className="wrapper">
           {this.getVideoCases()}
           <div
+            className="showCases"
             style={{
               textAlign: "center",
               padding: "2.7vw",
@@ -126,7 +99,7 @@ class Home extends React.Component {
               fontSize: "15px",
             }}
           >
-            <Link className="showCases" href="/portfolio">
+            <Link href="/portfolio">
               <a>
                 <p>Посмотреть все кейсы</p>
                 <svg
@@ -153,7 +126,5 @@ class Home extends React.Component {
     );
   }
 }
-
-
 
 export default Home;

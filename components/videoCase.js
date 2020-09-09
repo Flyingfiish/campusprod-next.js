@@ -24,7 +24,10 @@ class VideoCase extends React.Component {
     if (this.props.bottomPanel)
       return (
         <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data._id}>
-          <a title="PortfolioItem" style={{ textDecoration: "none", color: "black" }}>
+          <a
+            title="PortfolioItem"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <p className="date">27 июля</p>
             <p className="name">{this.props.data.name}</p>
             {this.props.isDescription && (
@@ -44,6 +47,7 @@ class VideoCase extends React.Component {
       button = (
         <div className="watchCase" onClick={() => this.handleModal()}>
           <svg
+            className="play-button"
             style={{ marginRight: "10px" }}
             xmlns="http://www.w3.org/2000/svg"
             width="52"
@@ -82,6 +86,7 @@ class VideoCase extends React.Component {
           >
             <p>Посмотреть кейс</p>
             <svg
+              className="play-button"
               style={{ marginTop: "3px", marginLeft: "10px" }}
               xmlns="http://www.w3.org/2000/svg"
               enableBackground="new 0 0 15.698 8.706"
@@ -155,7 +160,10 @@ class VideoCase extends React.Component {
           </Modal>
           <img alt="videocase cover" src={photo}></img>
           <div className="videocaseContent">
-            <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data._id}>
+            <Link
+              href="/portfolio/[id]"
+              as={"/portfolio/" + this.props.data._id}
+            >
               <a title="PortfolioItem" style={{ textDecoration: "none" }}>
                 <div className="videoCaseHead">
                   <h3>{this.props.data.name}</h3>

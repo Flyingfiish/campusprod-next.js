@@ -8,7 +8,7 @@ export default function HomeRoute({ cases, loaded }) {
   return (
     <div>
       <Head>
-        <title>CAMPUS Production</title>
+        <title>Главная | CAMPUS Production</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="CAMPUS Production"></meta>
         <meta property="og:url" content="CAMPUS Production"></meta>
