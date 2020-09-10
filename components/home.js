@@ -83,7 +83,7 @@ class Home extends React.Component {
         <BackgroundVideo
           img="main.jpg"
           ids={["https://www.youtube.com/embed/Dpslkx3X7k0"]}
-          mainText="ЫЫЫЫЫЫЫЫЫЫ"
+          mainText="ЫЫЫЫЫ ЫЫЫЫЫ"
           secondaryText="Более 500 000 просмотров на проектах"
           className="video"
         ></BackgroundVideo>
