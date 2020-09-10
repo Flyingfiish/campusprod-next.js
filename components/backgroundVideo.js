@@ -44,7 +44,8 @@ class BackgroundVideo extends React.Component {
     let playStop = "";
     if (!this.props.isAbout)
       playStop = (
-        <div className="play-section"
+        <div
+          className="play-section"
           style={{
             marginBottom: "10%",
             display: "flex",
@@ -56,7 +57,7 @@ class BackgroundVideo extends React.Component {
           onClick={() => this.handleModal()}
         >
           <svg
-          className="play-button"
+            className="play-button"
             style={{ marginRight: "10px" }}
             xmlns="http://www.w3.org/2000/svg"
             width="67"
@@ -95,7 +96,9 @@ class BackgroundVideo extends React.Component {
             <p>{this.props.secondaryText}</p>
           </div>
           {playStop}
-          <div className="about-text">{aboutText}</div>
+          <div className="about-text">
+            {aboutText}
+          </div>
         </div>
         <Modal
           style={{
@@ -113,7 +116,7 @@ class BackgroundVideo extends React.Component {
               background: "#000",
               overflow: "hidden",
               WebkitOverflowScrolling: "touch",
-              borderRadius: "10px",
+
               outline: "none",
               padding: "0",
               top: "50%",
@@ -122,7 +125,6 @@ class BackgroundVideo extends React.Component {
               bottom: "auto",
               marginRight: "-50%",
               transform: "translate(-50%, -50%)",
-              width: "60%",
               boxShadow: "0px 29px 114px 24px rgba(0, 0, 0, 0.75)",
             },
           }}

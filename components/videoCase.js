@@ -127,7 +127,7 @@ class VideoCase extends React.Component {
                 background: "#000",
                 overflow: "hidden",
                 WebkitOverflowScrolling: "touch",
-                borderRadius: "10px",
+
                 outline: "none",
                 padding: "0",
                 top: "50%",
@@ -136,7 +136,6 @@ class VideoCase extends React.Component {
                 bottom: "auto",
                 marginRight: "-50%",
                 transform: "translate(-50%, -50%)",
-                width: "60%",
                 boxShadow: "0px 29px 114px 24px rgba(0, 0, 0, 0.75)",
               },
             }}

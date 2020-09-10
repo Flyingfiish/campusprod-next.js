@@ -4,11 +4,13 @@ class Contacts extends React.Component {
   render() {
     return (
       <div className="contacts">
-        <h1>КОНТАКТЫ</h1>
-        <img src="contactsback.jpg" alt="contactsback"></img>
+        <div className="contacts-head" >
+          <h1>КОНТАКТЫ</h1>
+          <img src="contactsback.jpg" alt="contactsback"></img>
+        </div>
 
         <div className="contacts-info">
-          <iframe
+          <iframe className="contact-map"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad74752ec1f00cab2744a536ce5da14d2430a2094f1b3919da0f74cca374ebe66&amp;source=constructor"
             width="533"
             height="533"

@@ -1,22 +1,22 @@
 .persons-description img {
-  width: 451px;
+  width: 23.4895vw;
 }
 
 .person-box {
-  padding: 7.5px;
+  padding: 0.3906vw;
   display: flex;
   flex-direction: column;
 }
 
 .person-box b {
-  margin-top: 50px;
-  font-size: 25px;
+  margin-top: 2.6041vw;
+  font-size: 1.3020vw;
 }
 
 .person-box p {
-  font-size: 20px;
-  margin-top: 20px;
-  width: 451px;
+  font-size: 1.0416vw;
+  margin-top: 1.0416vw;
+  width: 23.489vw;
 }
 
 .persons-description {
@@ -24,19 +24,19 @@
   flex-direction: row;
   justify-content: center;
   color: white;
-  padding-bottom: 110px;
+  padding-bottom: 5.7291vw;
 }
 
 #person1 {
-  margin-top: 257px;
+  margin-top: 13.385vw;
 }
 
 #person2 {
-  margin-top: 107px;
+  margin-top: 5.5729vw;
 }
 
 #person3 {
-  margin-top: 247px;
+  margin-top: 12.8648vw;
 }
 
 .first {
@@ -48,29 +48,32 @@
 }
 
 .first b {
-  margin-left: 353px;
-  font-size: 100px;
+  margin-left: 18.3854vw;
+  font-size: 5.2083vw;
   font-weight: 900;
   z-index: 1;
   position: relative;
 }
 
 .first p {
-  font-size: 20px;
-  width: 517px;
-  line-height: 50px;
-  margin-top: 65px;
-  margin-left: 888px;
-  padding-bottom: 168px;
+  font-size: 1.0416vw;
+  width: 26.9270vw;
+  line-height: 2.6041vw;
+  margin-top: 3.3854vw;
+  margin-left: 46.25vw;
+  padding-bottom: 8.75vw;
+}
+.step-number-margin{
+  height: 13.6979vw;
 }
 
 .step-number {
   color: black;
   position: absolute;
-  font-size: 308px;
+  font-size: 16.0416vw;
   font-weight: bold;
-  margin-top: 38px;
-  margin-left: 291px;
+  margin-top: 1.9791vw;
+  margin-left: 15.1562vw;
   z-index: 0;
 }
 
@@ -92,39 +95,40 @@
 }
 
 .second-step-number {
-  padding-top: 126px;
-  font-size: 223px;
+  padding-top: 6.5625vw;
+  font-size: 11.6145vw;
   font-weight: bold;
-  margin-left: 455px;
+  margin-left: 23.6979vw;
 }
 
 .second b {
-  font-size: 80px;
+  font-size: 4.1666vw;
   font-weight: 900;
-  margin-left: 455px;
-  margin-top: -80px;
+  margin-left: 23.6979vw;
+  margin-top: -4.1666vw;
 }
 
 .second p {
-  font-size: 20px;
-  width: 560px;
-  line-height: 50px;
-  margin-top: 65px;
-  margin-left: 455px;
-  padding-bottom: 200px;
+  font-size: 1.0416vw;
+  width: 29.1666vw;
+  line-height: 2.6041vw;
+  margin-top: 3.3854vw;
+  margin-left: 23.6979vw;
+  padding-bottom: 10.4166vw;
 }
 
 .third b {
-  font-size: 100px;
+  font-size: 5.2083vw;
   font-weight: 900;
-  margin-left: 353px;
+  margin-left: 18.385vw;
   position: relative;
 }
 
 .third img {
   position: absolute;
-  margin-top: 180px;
-  margin-left: 275px;
+  margin-top: 9.375vw;
+  margin-left: 14.3229vw;
+  width: 19.0625vw;
 }
 
 .third {
@@ -132,15 +136,29 @@
 }
 
 .third p {
-  font-size: 20px;
-  width: 517px;
-  line-height: 50px;
-  margin-top: 65px;
-  margin-left: 888px;
-  padding-bottom: 168px;
+  font-size: 1.0416vw;
+  width: 26.927vw;
+  line-height: 2.6041vw;
+  margin-top: 3.3854vw;
+  margin-left: 46.25vw;
+  padding-bottom: 8.75vw;
+}
+
+.third-margin{
+  height: 17.0833vw;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .about p{
+    font-size: 7px;
+  }
+
+  .persons-description b{
+    font-size: 7px;
+  }
 }

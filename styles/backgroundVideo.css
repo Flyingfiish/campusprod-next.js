@@ -57,6 +57,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+}
+
+.main-text p{
+  font-weight: 500;
+}
+
+.play-section p{
+  font-weight: 500;
+}
+
+.play-section{
+  margin-top: 5.2vw;
 }
 
 @media screen and (max-width: 850px) {
@@ -84,5 +97,10 @@
 
   .play-section {
     margin-top: 76px;
+  }
+
+  .about-text{
+    font-size: 7px;
+    width: 70%;
   }
 }

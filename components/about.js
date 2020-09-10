@@ -3,7 +3,7 @@ import BackgroundVideo from "./backgroundVideo";
 class About extends React.Component {
   render() {
     return (
-      <div style={{ backgroundColor: "black" }}>
+      <div className="about" style={{ backgroundColor: "black" }}>
         <BackgroundVideo
           isAbout={true}
           img="about.jpg"
@@ -38,7 +38,7 @@ class About extends React.Component {
         </div>
         <div className="first">
           <h1 className="step-number">01</h1>
-          <div style={{ height: "263px" }}></div>
+          <div className='step-number-margin'></div>
           <b>Как все начиналось</b>
 
           <p>
@@ -67,7 +67,7 @@ class About extends React.Component {
         </div>
         <div className="third">
           <img src="03.svg" alt="step"></img>
-          <div style={{ height: "328px" }}></div>
+          <div className="third-margin"></div>
           <b>Продуманность</b>
           <p>
             Любой проект стартует с глубокого изучения Вашего клиента, начиная с

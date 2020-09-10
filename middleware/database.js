@@ -4,7 +4,7 @@ import VideoCase from "./VideoCase.spec";
 
 mongoose
   .connect(
-    "mongodb+srv://eldar:may990521@campusprod.dms7w.mongodb.net/Portfolio?retryWrites=true&w=majority",
+    process.env.MONGODB,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .catch((err) => console.log(err));

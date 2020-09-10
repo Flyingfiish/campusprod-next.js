@@ -21,13 +21,8 @@ class Photo extends React.Component {
       <div
         className="photo"
         onClick={() => this.handleModal()}
-        style={{
-          paddingTop: this.props.paddingTop,
-          background: "url('" + this.props.url + "')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
       >
+        <img src={this.props.url} alt="portfolio-item-photo"></img>
         <Modal
           children={this.fullPhoto}
           isOpen={this.state.isModalOpen}

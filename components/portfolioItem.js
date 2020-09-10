@@ -72,24 +72,10 @@ class PortfolioItem extends React.Component {
             <div className="portfolio-item-description">
               {this.paragraphs(this.state.info.description)}
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                maxWidth: "530px",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                height: "auto",
-              }}
-            >
-              {workersInfo}
-            </div>
+            <div className="roles">{workersInfo}</div>
           </div>
           <div className="portfolio-item-photos">
-            <div style={{ width: "1214px" }}>
               <Photo url={this.state.info.photos[0]}></Photo>
-            </div>
           </div>
         </div>
       );

@@ -1,33 +1,81 @@
-.portfolio-item-info{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    color: white;
-    padding-top: 70px;
-    padding-bottom: 110px;
+.portfolio-item-info {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding-top: 70px;
+  padding-bottom: 110px;
 }
 
-.portfolio-item-description{
-    width: 530px;
-    font-size: 23px;
+.portfolio-item-description {
+  width: 530px;
+  font-size: 23px;
 }
 
-.worker{
-    display: flex;
+.worker {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.role {
+  font-weight: bold;
+}
+
+.portfolio-item-photos {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.roles {
+  display: flex;
+  flex-direction: row;
+  max-width: 530px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+}
+
+@media screen and (max-width: 850px) {
+  .portfolio-item-info {
+    padding-top: 4.6vw;
+    padding-bottom: 4.6vw;
     flex-direction: column;
-    font-size: 18px;
-    padding: 10px;
-}
-
-.role{
-    font-weight: bold;
-}
-
-.portfolio-item-photos{
-    padding-top: 25px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
+  }
+  .portfolio-item-description {
+    width: 76.5vw;
+  }
+
+  .roles{
+    width: 76.5vw;
+    justify-content: flex-start
+  }
+
+  .worker{
+      padding-right: 30px;
+      padding-left: 0;
+  }
+
+  .portfolio-item-info p {
+    font-size: 6px;
+  }
+
+  .portfolio-item-info .role {
+    font-size: 6px;
+  }
+  .portfolio-item-info .person {
+    font-size: 6px;
+  }
+
+  .portfolio-item-photos{
+      padding: 1.5vw;
+      margin: 0;
+  }
 }
