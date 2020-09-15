@@ -60,7 +60,12 @@ class Header extends React.Component {
             </a>
           </Link>
           <Link exact href="/portfolio">
-            <a title="Portfolio" id="portfolio" style={activeStyle} className="link">
+            <a
+              title="Portfolio"
+              id="portfolio"
+              style={activeStyle}
+              className="link"
+            >
               <p>Портфолио</p>
             </a>
           </Link>
@@ -76,7 +81,11 @@ class Header extends React.Component {
           </Link>
         </nav>
         <div className="rightLinks">
-          <Button text="Оставить заявку" fontWeight="Bold"></Button>
+          <Link href="/order">
+            <a>
+              <Button text="Оставить заявку" fontWeight="Bold"></Button>
+            </a>
+          </Link>
         </div>
       </header>
     );

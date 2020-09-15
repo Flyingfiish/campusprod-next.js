@@ -12,16 +12,17 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: 0.6s ease;
 }
 
 .panel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transform: scale3d(1, 0, 1);
-  transition: all 0.3s ease-out;
   transform-origin: bottom;
   color: transparent;
+  opacity: 0;
+  transition: 0.1s;
 }
 
 .watchCase {
@@ -48,8 +49,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  height: 100%;
+  width: 100%;
   background: rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
@@ -57,24 +58,59 @@
   transition-duration: 300ms;
   overflow: hidden;
   z-index: 999999;
+  transform-origin: left;
+  transition: 0.1s;
+}
+
+.dark-thing{
+  position: absolute;
+  border-radius: 150%;
+  
+  width: 300%;
+  height: 300%;
+  left: -250%;
+  top: -250%;
+  transition: 0.5s ease;
+  transform: rotate(-50deg);
+}
+
+.videocase-buttons{
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: -100%;
+  transition: 0.5s ease;
+  transition-delay: 0.2s;
 }
 
 .videoCaseHead {
   padding: 50px;
-  transform: scale3d(1, 0, 1);
   color: transparent;
-  transition: all 0.3s ease-out;
-  opacity: 0;
   transform-origin: top;
   text-decoration: none;
+  opacity: 0;
+  transition: 0.1s;
 }
 
 .videoCaseHead h3 {
   margin-top: 0;
 }
 
-.videoCaseHover:hover .videocaseContent {
+.videoCaseHover:hover .videocase-buttons{
+  top: 0;
+}
+
+.videoCaseHover:hover .dark-thing{
+  left: -100%;
+  top: -100%;
   background: rgba(0, 0, 0, 0.4);
+}
+
+.videoCaseHover:hover .videocaseContent {
+  
+  transform: scale3d(1, 1, 1);
 }
 
 .videoCaseHover:hover .panel {
@@ -90,10 +126,10 @@
 }
 
 .videoCaseHover:hover {
-  transform: scale3d(1.01, 1.01, 1.01);
-  -webkit-box-shadow: 0px 0px 67px -16px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 67px -16px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 67px -16px rgba(0, 0, 0, 0.75);
+}
+
+.videoCaseHover:hover img {
+  transform: scale3d(1.02, 1.02, 1.02);
 }
 
 .date {
@@ -125,7 +161,7 @@
   opacity: 0;
 }
 
-.ReactModal__Content{
+.ReactModal__Content {
   width: 60%;
   border-radius: 10px;
 }
@@ -134,12 +170,9 @@
   pointer-events: none;
 }
 
-.videoCaseHead:hover {
-  text-decoration: underline #ccc;
-}
 
 @media screen and (max-width: 850px) {
-  .ReactModal__Content{
+  .ReactModal__Content {
     width: 100%;
     border-radius: 0px;
   }

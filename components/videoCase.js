@@ -159,20 +159,23 @@ class VideoCase extends React.Component {
           </Modal>
           <img alt="videocase cover" src={photo}></img>
           <div className="videocaseContent">
-            <Link
-              href="/portfolio/[id]"
-              as={"/portfolio/" + this.props.data._id}
-            >
-              <a title="PortfolioItem" style={{ textDecoration: "none" }}>
-                <div className="videoCaseHead">
-                  <h3>{this.props.data.name}</h3>
-                  <p style={{ marginTop: "25px", color: "lightgray" }}>
-                    {this.props.data.description[0]}
-                  </p>
-                </div>
-              </a>
-            </Link>
-            <div className="panel">{button}</div>
+            <div className="dark-thing"></div>
+            <div className="videocase-buttons">
+              <Link
+                href="/portfolio/[id]"
+                as={"/portfolio/" + this.props.data._id}
+              >
+                <a title="PortfolioItem" style={{ textDecoration: "none" }}>
+                  <div className="videoCaseHead">
+                    <h3>{this.props.data.name}</h3>
+                    <p style={{ marginTop: "25px", color: "lightgray" }}>
+                      {this.props.data.description[0]}
+                    </p>
+                  </div>
+                </a>
+              </Link>
+              <div className="panel">{button}</div>
+            </div>
           </div>
         </div>
         {this.description()}

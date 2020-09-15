@@ -119,6 +119,7 @@ class Portfolio extends React.Component {
           }
           onClick={() => this.handleChangeType.call(this, item[0])}
         >
+          <div className="order-type-button-hover"></div>
           <p>{item[1]}</p>
         </div>
       );

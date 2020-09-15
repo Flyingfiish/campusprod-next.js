@@ -9,7 +9,7 @@ class Button extends React.Component {
     boldStyle.color = "#fff";
     return (
       <div className="button" style={boldStyle}>
-        {this.props.text}
+        <p>{this.props.text}</p>
       </div>
     );
   }

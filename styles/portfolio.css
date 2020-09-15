@@ -91,6 +91,10 @@
   height: 108px;
 }
 
+.order-type-button-hover {
+  width: 100%;
+}
+
 @media screen and (max-width: 850px) {
   .little-videocase {
     margin: 20px;
@@ -178,7 +182,7 @@
     height: 90px;
   }
 
-  .portfolio-content .videoCaseHover{
+  .portfolio-content .videoCaseHover {
     pointer-events: none;
   }
 }

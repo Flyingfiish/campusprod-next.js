@@ -3,6 +3,7 @@ import Button from "./button";
 import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { Modal } from "@material-ui/core";
+import { withRouter } from "next/router";
 
 const errorTypes = {
   companyNameEmpty: "Введите название вашей компании.",
@@ -236,7 +237,8 @@ class Order extends React.Component {
 
     let variants = types.map((item, index) => {
       return (
-        <div key={index}
+        <div
+          key={index}
           className={
             this.state[item[0]]
               ? "order-type-button checked"
@@ -244,6 +246,7 @@ class Order extends React.Component {
           }
           onClick={() => this.handleChangeType.call(this, item[0])}
         >
+          <div className="order-type-button-hover"></div>
           <p>{item[1]}</p>
         </div>
       );
@@ -251,6 +254,14 @@ class Order extends React.Component {
     let result = <div></div>;
     if (this.state.requestSucceess) result = this.success();
     else if (this.state.serverError) result = this.serverError();
+    let close = <div></div>;
+    if (this.props.standAlone) {
+      close = (
+        <div className="order-close" onClick={() => this.props.router.back()}>
+          <img src="close.svg"></img>
+        </div>
+      );
+    }
     return (
       <div className="wrapper order">
         <div className="order-content">
@@ -261,6 +272,7 @@ class Order extends React.Component {
             onClose={() => this.handleModal()}
           ></Modal>
           <div className="leftColumn">
+            {close}
             <h2 className="blue">Оставить заявку</h2>
             <p className="order-description">
               За 4 года было реализовано более 100 проектов: рекламные видео,
@@ -284,11 +296,18 @@ class Order extends React.Component {
               <CssTextField
                 id="companyName"
                 label="Название компании"
+                fullWidth={true}
+                margin={"dense"}
               ></CssTextField>
               {this.state.companyNameEmptyError
                 ? this.error(errorTypes.companyNameEmpty)
                 : null}
-              <CssTextField id="email" label="Электронная почта"></CssTextField>
+              <CssTextField
+                id="email"
+                label="Электронная почта"
+                fullWidth={true}
+                margin={"dense"}
+              ></CssTextField>
               {this.state.emailEmptyError
                 ? this.error(errorTypes.emailEmpty)
                 : null}
@@ -298,6 +317,8 @@ class Order extends React.Component {
               <CssTextField
                 id="phone"
                 label="Телефон или мессенджер"
+                fullWidth={true}
+                margin={"dense"}
               ></CssTextField>
               {this.state.phoneEmptyError
                 ? this.error(errorTypes.phoneEmpty)
@@ -305,16 +326,18 @@ class Order extends React.Component {
               {this.state.phoneWrongFormatError
                 ? this.error(errorTypes.phoneWrongFormat)
                 : null}
-              <CssTextField id="name" label="Имя"></CssTextField>
+              <CssTextField
+                id="name"
+                label="Имя"
+                fullWidth={true}
+                margin={"dense"}
+              ></CssTextField>
               {this.state.clientNameEmptyError
                 ? this.error(errorTypes.clientNameEmpty)
                 : null}
             </div>
             <div className="makeOrder" style={{ margin: "50px 0" }}>
-              <div
-                
-                onClick={() => this.handleMakeOrder.call(this)}
-              >
+              <div onClick={() => this.handleMakeOrder.call(this)}>
                 <Button text="Оставить заявку" fontWeight="500"></Button>
               </div>
             </div>
@@ -336,4 +359,4 @@ class Order extends React.Component {
   }
 }
 
-export default Order;
+export default withRouter(Order);
