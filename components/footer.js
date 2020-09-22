@@ -5,7 +5,7 @@ class Footer extends React.Component {
     return (
       <footer>
         <div className="footer-top">
-          <p>сampus@yandex.ru, контакты</p>
+          <p>&#099;&#097;&#109;&#112;&#117;&#115;&#112;&#114;&#111;&#100;&#064;&#109;&#097;&#105;&#108;&#046;&#114;&#117;, контакты</p>
           <div className="social">
             <img src="twitter.svg" alt="social"></img>
             <img src="youtube.svg" alt="social"></img>

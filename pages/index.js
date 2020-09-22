@@ -10,6 +10,7 @@ export default function HomeRoute({ cases, loaded }) {
       <Head>
         <title>Главная | CAMPUS Production</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta httpEquiv="content-language" content="ru"></meta>
         <meta property="og:title" content="CAMPUS Production"></meta>
         <meta property="og:url" content="CAMPUS Production"></meta>
         <meta property="og:image" content="main.jpg"></meta>
