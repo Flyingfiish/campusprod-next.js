@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Home from "../components/home";
-import { getVideoCases } from "./api/getvideocases";
+import { getVideoCases } from "../lib/getvideocasesbyid";
 
 export default function HomeRoute({ cases, loaded }) {
   return (
@@ -14,7 +14,10 @@ export default function HomeRoute({ cases, loaded }) {
         <meta property="og:title" content="CAMPUS Production"></meta>
         <meta property="og:url" content="CAMPUS Production"></meta>
         <meta property="og:image" content="main.jpg"></meta>
-        <meta property="og:description" content="За 4 года было реализовано более 100 проектов: рекламные видео, музыкальные клипы, дизайны сайтов, оформление социальных сетей. Каждую задачу мы решаем осмысленно, и красиво. Для начала работы нам надо поговорить. Достаточно указать контакты, и мы свяжемся, чтобы все обсудить"></meta>
+        <meta
+          property="og:description"
+          content="За 4 года было реализовано более 100 проектов: рекламные видео, музыкальные клипы, дизайны сайтов, оформление социальных сетей. Каждую задачу мы решаем осмысленно, и красиво. Для начала работы нам надо поговорить. Достаточно указать контакты, и мы свяжемся, чтобы все обсудить"
+        ></meta>
         <meta property="og:type" content="website" />
         <meta
           name="description"

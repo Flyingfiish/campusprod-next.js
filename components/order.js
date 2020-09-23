@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { Modal } from "@material-ui/core";
 import { withRouter } from "next/router";
+import emailjs from "emailjs-com";
 
 const errorTypes = {
   companyNameEmpty: "Введите название вашей компании.",
@@ -40,23 +41,6 @@ const CssTextField = withStyles({
     },
   },
 })(TextField);
-
-/*function textField(fieldName, fieldNameRu) {
-  return (
-    <div className="text-field">
-      <input
-        type="text"
-        name="text-field-label"
-        id={fieldName}
-        autoComplete="off"
-        required
-      ></input>
-      <label for="text-field-label" className="text-field-label-name">
-        <span className="text-field-content">{fieldNameRu}</span>
-      </label>
-    </div>
-  );
-}*/
 
 class Order extends React.Component {
   state = {
@@ -101,6 +85,7 @@ class Order extends React.Component {
     const re = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
     return re.test(phone);
   }
+
   clearErrors() {
     this.setState({
       companyNameEmptyError: false,
@@ -113,7 +98,7 @@ class Order extends React.Component {
     });
   }
 
-  handleMakeOrder() {
+  async handleMakeOrder() {
     this.setState({ serverError: false });
     this.setState({ requestSucceess: false });
     this.clearErrors();
@@ -159,29 +144,30 @@ class Order extends React.Component {
     }
 
     if (!error && !this.state.isSended) {
-      let body = {
-        companyName: companyName,
-        email: email,
-        phone: phone,
-        clientName: clientName,
-        projectTypes: projectTypes,
-      };
-      console.log(JSON.stringify(body));
-      fetch("http://localhost:5000/sendemail", {
-        method: "POST",
-        mode: "same-origin",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body),
-      }).then((res) => {
-        if (!res.ok) {
-          this.setState({ serverError: true });
-        } else {
-          this.setState({ requestSucceess: true });
-          this.setState({ isSended: true });
-        }
-      });
+      const html =
+        "Название компании: " +
+        companyName +
+        "<br>E-Mail: " +
+        email +
+        "<br>Телефон: " +
+        phone +
+        "<br>Имя клиента: " +
+        clientName +
+        "<br>Клиент хочет: " +
+        projectTypes;
+      const response = await emailjs.send(
+        process.env.EMAILJS_SERVICE_ID,
+        process.env.EMAILJS_TEMPLATE_ID,
+        { subject: "Новый заказ", text: html },
+        process.env.EMAILJS_USER_ID
+      );
+
+      if (!response.status === 200) {
+        this.setState({ serverError: true });
+      } else {
+        this.setState({ requestSucceess: true });
+        this.setState({ isSended: true });
+      }
       this.handleModal();
     }
   }

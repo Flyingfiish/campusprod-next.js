@@ -1,6 +1,6 @@
 import nextConnect from "next-connect";
 import mongoose from "mongoose";
-import VideoCase from "./VideoCase.spec";
+import VideoCase from "../utils/videoCaseSchema";
 
 mongoose
   .connect(

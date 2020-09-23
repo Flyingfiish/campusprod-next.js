@@ -1,7 +1,7 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
-import { getVideoCases } from "../api/getvideocases";
-import { getAllIds } from "../api/findvideocases";
+import {getVideoCases} from "../../lib/getvideocasesbyid";
+import {getAllIds} from "../../lib/getallids";
 import PortfolioItem from "../../components/portfolioItem";
 import Head from "next/head";
 

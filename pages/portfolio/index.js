@@ -2,7 +2,7 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import Portfolio from "../../components/portfolio";
 import Head from "next/head";
-import { findVideoCases } from "../api/findvideocases";
+import { findVideoCases } from "../../lib/findvideocases";
 
 export default function PortfolioRoute({ cases, loaded, found }) {
   return (
