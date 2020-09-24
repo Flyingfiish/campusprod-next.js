@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 class Footer extends React.Component {
   render() {
@@ -13,10 +14,12 @@ class Footer extends React.Component {
             <img src="twitter.svg" alt="social"></img>
           </div>
         </div>
-        <div className="footer-line" style={{borderBottom:"1px solid white", width: '100%'}}></div>
+        <div className="footer-line"></div>
         <div className="footer-bottom">
           <p>© 2020 CAMPUS Production</p>
-          <p>Политика конфиденциальности</p>
+          <Link href='/privacyPolicy'>
+          <a>Политика конфиденциальности</a>
+          </Link>
         </div>
       </footer>
     );

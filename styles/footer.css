@@ -8,6 +8,11 @@ footer {
   font-size: 25px;
 }
 
+.footer-line{
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+
 .partners {
     margin-top:3.6vw;
 }
@@ -58,6 +63,7 @@ table th, td {
     align-items: center;
     width: 58%;
     color: #CCCCCC;
+    background: black;
 }
 
 .footer-top *{
