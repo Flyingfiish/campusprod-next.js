@@ -176,6 +176,29 @@
     width: 100%;
     border-radius: 0px;
   }
+
+  .videocase-buttons{
+    display: flex;
+    width: 87%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .leftColumn .videocase-buttons{
+    margin-top: 3vw;
+    align-items: flex-start;
+  }
+
+  .rightColumn .videocase-buttons{
+    margin-top: 3vw;
+    align-items: flex-start;
+  }
+
+  .videoCaseHead{
+    justify-self: flex-start;
+  }
+
   .videoCase {
     border-radius: 3px;
     margin-bottom: 5px;

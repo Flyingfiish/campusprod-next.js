@@ -10,37 +10,6 @@ class Home extends React.Component {
     loaded: false,
   };
 
-  /*componentDidMount() {
-    fetch("/getvideocases", {
-      method: "POST",
-      mode: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ids: [
-          "5f4f802368e6231368cf0b85",
-          "5f4f802368e6231368cf0b7e",
-          "5f4f802368e6231368cf0b8b",
-        ],
-      }),
-    }).then((res) => {
-      if (res.ok) {
-        res.text().then((result) => {
-          const cases = JSON.parse(result);
-          console.log(cases.length);
-          if (cases.length > 0) {
-            this.setState({ cases: cases, loaded: true });
-          } else {
-            setTimeout(() => {
-              this.findVideoCases();
-            }, 3000);
-          }
-        });
-      }
-    });
-  }*/
-
   getVideoCases() {
     if (this.props.loaded)
       return (
