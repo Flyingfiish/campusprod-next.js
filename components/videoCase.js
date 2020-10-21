@@ -26,8 +26,7 @@ class VideoCase extends React.Component {
         <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data._id}>
           <a
             title="PortfolioItem"
-            style={{ textDecoration: "none", color: "black" }}
-          >
+            style={{ textDecoration: "none", color: "black" }}>
             <p className="date">27 июля</p>
             <p className="name">{this.props.data.name}</p>
             {this.props.isDescription && (
@@ -50,24 +49,21 @@ class VideoCase extends React.Component {
             className="play-button"
             style={{ marginRight: "10px" }}
             xmlns="http://www.w3.org/2000/svg"
-            width="52"
-            height="52"
-            viewBox="0 0 67 67"
-          >
+            width="67"
+            height="67"
+            viewBox="0 0 67 67">
             <g data-name="Group 60" transform="translate(-834 -891)">
               <path
                 fill="#fff"
                 d="M14 0l14 24H0z"
                 data-name="Polygon 1"
-                transform="rotate(90 -13.5 897.5)"
-              ></path>
+                transform="rotate(90 -13.5 897.5)"></path>
               <g
                 fill="none"
                 stroke="#fff"
                 strokeWidth="1"
                 data-name="Ellipse 6"
-                transform="translate(834 891)"
-              >
+                transform="translate(834 891)">
                 <circle cx="33.5" cy="33.5" r="33.5" stroke="none"></circle>
                 <circle cx="33.5" cy="33.5" r="33"></circle>
               </g>
@@ -82,24 +78,43 @@ class VideoCase extends React.Component {
           <a
             className="showCase"
             style={{ textDecoration: "none", color: "white" }}
-            title="PortfolioItem"
-          >
+            title="PortfolioItem">
             <p>Посмотреть кейс</p>
             <svg
               className="play-button"
-              style={{ marginTop: "3px", marginLeft: "10px" }}
+              style={{ marginLeft: "10px" }}
               xmlns="http://www.w3.org/2000/svg"
-              enableBackground="new 0 0 15.698 8.706"
-              version="1.1"
-              viewBox="0 0 15.698 8.706"
-              xmlSpace="preserve"
-              width="41"
-              height="20"
-            >
-              <path
-                fill="#ADADAD"
-                d="M11.354 0L10.646 0.706 13.786 3.853 0 3.853 0 4.853 13.786 4.853 10.646 8 11.354 8.706 15.698 4.353z"
-              ></path>
+              width="42.644"
+              height="16.028"
+              viewBox="0 0 42.644 16.028">
+              <g transform="translate(0 0.707)">
+                <line
+                  y2="10.334"
+                  transform="translate(41.937 7.307) rotate(135)"
+                  fill="rgba(0,0,0,0)"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                />
+                <line
+                  x2="10.334"
+                  transform="translate(41.937 7.307) rotate(135)"
+                  fill="rgba(0,0,0,0)"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                />
+                <path
+                  d="M-3918.708,1531h-41.259"
+                  transform="translate(3959.967 -1523.692)"
+                  fill="rgba(0,0,0,0)"
+                  stroke="#fff"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                />
+              </g>
             </svg>
           </a>
         </Link>
@@ -153,8 +168,7 @@ class VideoCase extends React.Component {
               for (let i = 0; i < foo.length; i++) {
                 foo[i].classList.add("pointer-events-none");
               }
-            }}
-          >
+            }}>
             {this.video}
           </Modal>
           <img alt="videocase cover" src={photo}></img>
@@ -163,14 +177,11 @@ class VideoCase extends React.Component {
             <div className="videocase-buttons">
               <Link
                 href="/portfolio/[id]"
-                as={"/portfolio/" + this.props.data._id}
-              >
+                as={"/portfolio/" + this.props.data._id}>
                 <a title="PortfolioItem" style={{ textDecoration: "none" }}>
                   <div className="videoCaseHead">
                     <h3>{this.props.data.name}</h3>
-                    <p style={{ marginTop: "25px", color: "lightgray" }}>
-                      {this.props.data.description[0]}
-                    </p>
+                    <p>{this.props.data.description[0]}</p>
                   </div>
                 </a>
               </Link>

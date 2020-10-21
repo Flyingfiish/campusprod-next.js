@@ -13,7 +13,7 @@
   height: 56.2vw;
 }
 
-.kek {
+.layout {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,14 +33,14 @@
   );
 }
 
-.kek h1 {
+.layout h1 {
   font-size: 5.2vw;
   font-weight: 900;
   margin: 5px;
   text-align: center;
 }
 
-.kek p {
+.layout p {
   font-size: 20px;
   font-weight: 700;
 }
@@ -57,19 +57,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-}
-
-.main-text p{
   font-weight: 500;
+  margin: 0;
+  padding: 0;
 }
 
-.play-section p{
+.main-container {
+  margin-top: 20.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1046px;
+}
+
+.main-container p {
+  text-align: center;
+  font-size: 1.04vw;
   font-weight: 500;
+  margin: 0;
+  padding: 0;
 }
 
-.play-section{
-  margin-top: 5.2vw;
+.play-section p {
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.04vw;
+}
+
+.play-section {
+  margin-top: 45.2vw;
+  position: absolute;
+}
+
+.play-button {
+  width: 3.49vw;
+}
+
+.scroll-arrow{
+  width: 67px;
+  position: absolute;
+  margin-top: 51.51vw;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 850px) {
@@ -82,13 +110,22 @@
     height: 177.5vw;
   }
 
-  .kek h1 {
-    margin-top: 210px;
-    font-size: 35px;
+  .main-container{
+    margin-top: 65.625vw;
+    width: 80vw;
   }
 
-  .kek p {
-    font-size: 9px;
+  .main-text{
+    width: 80vw;
+  }
+
+  .layout h1 {
+    
+    font-size: 10.9375vw;
+  }
+
+  .layout p {
+    font-size: 2.8125vw;
   }
 
   .play-button {
@@ -96,11 +133,17 @@
   }
 
   .play-section {
-    margin-top: 76px;
+    margin-top: 145.625vw;
   }
 
-  .about-text{
-    font-size: 7px;
+  .scroll-arrow{
+    margin-top: 167.75vw;
+    width: 4.59375vw;
+    fill: white;
+  }
+
+  .about-text {
+    font-size: 4.0625vw;
     width: 70%;
   }
 }

@@ -15,8 +15,8 @@
 .content {
   margin: 0;
   padding: 0;
-  margin-top: 6.8vw;
-  width: 62.5%;
+  margin-top: 1.458vw;
+  width: 63.229vw;
 }
 
 .showCases {
@@ -27,25 +27,33 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-bottom: 2.6vw;
+  padding-top: 1.4vw;
+  text-align: center;
 }
 
 .rightColumn {
   width: 50%;
   float: right;
-  padding-left: 10px;
+  padding-left: 0.52083vw;
   box-sizing: border-box;
 }
 
 .leftColumn {
   width: 50%;
   float: left;
-  padding-right: 10px;
+  padding-right: 0.52083vw;
   box-sizing: border-box;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.watch-all-cases {
+  display: flex;
   align-items: center;
 }
 
@@ -77,20 +85,38 @@
   .rightColumn {
     padding-left: 2.5px;
   }
-}
 
-@media screen and (max-width: 1020px) {
   .content {
     width: 100%;
     margin: 0;
     padding: 5px;
   }
 
-  .top-videoCase .videoCase{
+  .top-videoCase .videoCase {
     height: 31.25vw;
   }
 
   .showCases {
     display: none;
+  }
+
+  .top-videoCase .videoCase {
+    height: 31.25vw;
+  }
+
+  .left-column-first-videoCase .videoCase {
+    height: 53.4375vw;
+  }
+
+  .standart-video-case .videoCase {
+    height: 26.875vw;
+  }
+
+  .right-column-first-videoCase .videoCase {
+    height: 31.5625vw;
+  }
+
+  .right-column-second-videoCase .videoCase {
+    height: 48.4375vw;
   }
 }

@@ -6,20 +6,31 @@
   flex-direction: row;
 }
 
-.order-content p {
-  padding-right: 10px;
-  font-size: 25px;
-  line-height: 50px;
+.order-description {
+  margin-top: 2.13vw;
 }
 
+.order-description-2 {
+  margin-top: 1.56vw;
+}
+
+.order-content p {
+  padding-right: 10px;
+  font-size: 1.302vw;
+  line-height: 2.604vw;
+  padding: 0;
+  padding-right: 2.6vw;
+}
+
+
 .order-content h1 {
-  margin-top: 100px;
-  font-size: 44px;
+  margin-top: 4.895vw;
+  font-size: 2.291vw;
 }
 
 .blue {
   color: #003cff;
-  font-size: 32px;
+  font-size: 1.66666vw;
 }
 
 .order {
@@ -30,7 +41,11 @@
 
 .order-form p {
   color: #cccccc;
-  font-size: 14px;
+  font-size: 0.7291vw;
+  line-height: normal;
+  margin-top: 1.718vw;
+  margin-bottom: 0.364vw;
+  padding: 0;
 }
 
 .company {
@@ -42,17 +57,17 @@
 .rightColumn b {
   margin: 0;
   padding: 0;
-  font-size: 28px;
-  letter-spacing: 10px;
+  font-size: 1.45833vw;
+  letter-spacing: 0.5208333vw;
   position: relative;
   color: white;
 }
 
 .order-type-button {
-  margin: 15px 15px 0 0;
-  height: 47px;
+  margin: 0.781vw 0.781vw 0 0;
+  height: 2.448vw;
   border: #cccccc solid 2px;
-  border-radius: 24px;
+  border-radius: 1.25vw;
   display: inline-block;
   cursor: pointer;
   color: #cccccc;
@@ -62,11 +77,13 @@
 }
 
 .order-type-button p {
+  font-size: 0.7291vw;
+  text-align: center;
   position: relative;
   width: auto;
-  padding: 0 35px;
+  padding: 0 1.562vw;
   margin: 0;
-  line-height: 43px;
+  line-height: 2.239vw;
   display: flex;
   overflow: hidden;
   transition: 0.2s linear;
@@ -80,17 +97,20 @@
 
 .order-type-button-hover {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 200%;
   transform: scaleX(0);
   transform-origin: left;
-  transition: 0.1s ease-in;
+  transition: 0.086s ease-in;
   background: #003cff;
-  border-radius: 24px;
 }
 
 .order-type-button:hover .order-type-button-hover {
-  transform: scaleX(1);
+  transform: scaleX(1.1);
+}
+
+.order-type-button:hover {
+  border: #003cff 2px solid;
 }
 
 .order-type-button:hover p {
@@ -108,7 +128,7 @@
 .text-field {
   width: 100%;
   position: relative;
-  height: 50px;
+  height: 2.60416vw;
   margin-bottom: 20px;
   overflow: hidden;
   box-sizing: border-box;
@@ -164,12 +184,25 @@
 }
 
 .input-fields {
-  margin-top: 50px;
-  margin-right: 15px;
+  margin-top: 2.135vw;
+  margin-right: 0.781vw;
 }
 
 .makeOrder p {
   font-size: 14px;
+}
+
+.makeOrder{
+  margin-top: 3.125vw;
+  margin-bottom: 3.125vw;
+  width: 212px;
+  height: 47px;
+  border-radius: 23px;
+}
+
+.makeOrder .button{
+  width: 212px;
+  height: 47px;
 }
 
 .leftColumn h2 {
@@ -182,6 +215,11 @@
   cursor: pointer;
 }
 @media screen and (max-width: 850px) {
+
+  .order-content h2{
+    margin-top: 7.8125vw;
+    font-size: 5.3125vw;
+  }
   .order-close {
     top: 7.5vw;
     right: 7.5vw;
@@ -189,7 +227,7 @@
 
   .blue {
     color: black;
-    font-size: 17px;
+    font-size: 0.8854vw;
     justify-self: flex-start;
     align-self: flex-start;
   }
@@ -201,7 +239,7 @@
     width: 93.7%;
   }
 
-  .order-content .order-description {
+  .order-content .order-description,.order-description-2 {
     display: none;
   }
 
@@ -218,14 +256,15 @@
   }
 
   .order-type-button p {
-    font-size: 8px;
-    line-height: 20px;
-    padding: 0 10px;
+    font-size: 2.5vw;
+    line-height: 6.25vw;
+    padding: 0 3.125vw;
     color: black;
   }
 
   .order-type-button {
-    height: 24px;
+    height: 7.5vw;
+    border-radius: 3.75vw;
     border: #003cff solid 2px;
     margin: 5px 5px 0 0;
   }
@@ -255,5 +294,10 @@
     -webkit-box-shadow: 0px 0px 99px 0px rgba(0, 0, 0, 0);
     -moz-box-shadow: 0px 0px 99px 0px rgba(0, 0, 0, 0);
     box-shadow: 0px 0px 99px 0px rgba(0, 0, 0, 0);
+  }
+
+  .makeOrder{
+    margin-top: 9.375vw;
+    margin-bottom: 9.375vw;
   }
 }

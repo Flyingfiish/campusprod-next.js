@@ -9,6 +9,10 @@ export default function ContactsRoute() {
       <Head>
         <title>Контакты | CAMPUS Production</title>
         <link rel="icon" href="/favicon.ico" />
+        
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"></link>
         <meta httpEquiv="content-language" content="ru"></meta>
         <meta property="og:title" content="Контакты | CAMPUS Production"></meta>
         <meta property="og:url" content="Контакты"></meta>

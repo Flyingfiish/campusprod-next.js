@@ -180,8 +180,7 @@ class Order extends React.Component {
           color: "red",
           fontWeight: "lighter",
           marginTop: "10px",
-        }}
-      >
+        }}>
         {text}
       </div>
     );
@@ -230,8 +229,7 @@ class Order extends React.Component {
               ? "order-type-button checked"
               : "order-type-button"
           }
-          onClick={() => this.handleChangeType.call(this, item[0])}
-        >
+          onClick={() => this.handleChangeType.call(this, item[0])}>
           <div className="order-type-button-hover"></div>
           <p>{item[1]}</p>
         </div>
@@ -255,8 +253,7 @@ class Order extends React.Component {
             open={false}
             children={result}
             isOpen={this.state.isModalOpen}
-            onClose={() => this.handleModal()}
-          ></Modal>
+            onClose={() => this.handleModal()}></Modal>
           <div className="leftColumn">
             {close}
             <h2 className="blue">Оставить заявку</h2>
@@ -267,7 +264,7 @@ class Order extends React.Component {
               нам надо поговорить. Достаточно указать контакты, и мы свяжемся,
               чтобы все обсудить.
             </p>
-            <p className="blue order-description">
+            <p className="blue order-description-2">
               Для начала работы нам надо поговорить. Достаточно указать
               контакты, и мы свяжемся, чтобы все обсудить.
             </p>
@@ -283,8 +280,7 @@ class Order extends React.Component {
                 id="companyName"
                 label="Название компании"
                 fullWidth={true}
-                margin={"dense"}
-              ></CssTextField>
+                margin={"dense"}></CssTextField>
               {this.state.companyNameEmptyError
                 ? this.error(errorTypes.companyNameEmpty)
                 : null}
@@ -292,8 +288,7 @@ class Order extends React.Component {
                 id="email"
                 label="Электронная почта"
                 fullWidth={true}
-                margin={"dense"}
-              ></CssTextField>
+                margin={"dense"}></CssTextField>
               {this.state.emailEmptyError
                 ? this.error(errorTypes.emailEmpty)
                 : null}
@@ -304,8 +299,7 @@ class Order extends React.Component {
                 id="phone"
                 label="Телефон или мессенджер"
                 fullWidth={true}
-                margin={"dense"}
-              ></CssTextField>
+                margin={"dense"}></CssTextField>
               {this.state.phoneEmptyError
                 ? this.error(errorTypes.phoneEmpty)
                 : null}
@@ -316,16 +310,15 @@ class Order extends React.Component {
                 id="name"
                 label="Имя"
                 fullWidth={true}
-                margin={"dense"}
-              ></CssTextField>
+                margin={"dense"}></CssTextField>
               {this.state.clientNameEmptyError
                 ? this.error(errorTypes.clientNameEmpty)
                 : null}
             </div>
-            <div className="makeOrder" style={{ margin: "50px 0" }}>
-              <div onClick={() => this.handleMakeOrder.call(this)}>
-                <Button text="Оставить заявку" fontWeight="500"></Button>
-              </div>
+            <div
+              className="makeOrder"
+              onClick={() => this.handleMakeOrder.call(this)}>
+              <Button text="Оставить заявку" fontWeight="500"></Button>
             </div>
             {serverError}
           </div>
@@ -334,9 +327,9 @@ class Order extends React.Component {
             style={{
               backgroundImage: "url(/sand.jpg)",
               backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
-            }}
-          >
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}>
             <b>CAMPUS</b>
           </div>
         </div>

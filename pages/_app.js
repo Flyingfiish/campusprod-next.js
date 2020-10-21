@@ -15,9 +15,20 @@ import "../styles/video.css";
 import "../styles/videoSelector.css";
 import "../styles/videoCase.css";
 import "../styles/privacyPolicy.css";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <Component {...pageProps}>
+      <Html>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"></link>
+        </Head>
+      </Html>
+    </Component>
+  );
 }
 
 export default MyApp;

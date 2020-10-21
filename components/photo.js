@@ -7,21 +7,17 @@ class Photo extends React.Component {
   };
 
   fullPhoto = (
-    <div>
-      <img
-        style={{ width: "100%", height: "auto" }}
-        src={this.props.url}
-        alt="photoCase"
-      ></img>
-    </div>
+    <img
+      style={{ width: "100%", height: "100%", objectFit:'contain' }}
+      src={this.props.url}
+      alt="photoCase"></img>
   );
 
   render() {
     return (
       <div
-        className="photo"
-        onClick={() => this.handleModal()}
-      >
+        className={"photo"}
+        onClick={() => this.handleModal()}>
         <img src={this.props.url} alt="portfolio-item-photo"></img>
         <Modal
           children={this.fullPhoto}

@@ -50,26 +50,18 @@ class Home extends React.Component {
     return (
       <div className="home">
         <BackgroundVideo
+          isMain={true}
           img="main.jpg"
           ids={["https://www.youtube.com/embed/Dpslkx3X7k0"]}
-          mainText="ЫЫЫЫЫ ЫЫЫЫЫ"
-          secondaryText="Более 500 000 просмотров на проектах"
-          className="video"
-        ></BackgroundVideo>
+          mainText="Сделай красиво ежжи!"
+          secondaryText="Выполнили 454 проектов"
+          className="video"></BackgroundVideo>
 
         <div className="wrapper">
           {this.getVideoCases()}
-          <div
-            className="showCases"
-            style={{
-              textAlign: "center",
-              padding: "2.7vw",
-              textDecoration: "none",
-              fontSize: "15px",
-            }}
-          >
+          <div className="showCases">
             <Link href="/portfolio">
-              <a>
+              <a className="watch-all-cases">
                 <p>Посмотреть все кейсы</p>
                 <svg
                   style={{ marginTop: "5px", marginLeft: "10px" }}
@@ -79,12 +71,10 @@ class Home extends React.Component {
                   viewBox="0 0 15.698 8.706"
                   xmlSpace="preserve"
                   width="41"
-                  height="20"
-                >
+                  height="20">
                   <path
                     fill="#000"
-                    d="M11.354 0L10.646 0.706 13.786 3.853 0 3.853 0 4.853 13.786 4.853 10.646 8 11.354 8.706 15.698 4.353z"
-                  ></path>
+                    d="M11.354 0L10.646 0.706 13.786 3.853 0 3.853 0 4.853 13.786 4.853 10.646 8 11.354 8.706 15.698 4.353z"></path>
                 </svg>
               </a>
             </Link>

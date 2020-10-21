@@ -1,7 +1,7 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
-import {getVideoCases} from "../../lib/getvideocasesbyid";
-import {getAllIds} from "../../lib/getallids";
+import { getVideoCases } from "../../lib/getvideocasesbyid";
+import { getAllIds } from "../../lib/getallids";
 import PortfolioItem from "../../components/portfolioItem";
 import Head from "next/head";
 
@@ -11,11 +11,14 @@ export default function PortfolioItemRoute({ cases, loaded }) {
       <Head>
         <title>{cases.name} | CAMPUS Production</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"></link>
         <meta httpEquiv="content-language" content="ru"></meta>
         <meta
           property="og:title"
-          content="Портфолио | CAMPUS Production"
-        ></meta>
+          content="Портфолио | CAMPUS Production"></meta>
         <meta property="og:url" content="Портфолио"></meta>
         <meta property="og:image" content={cases.photos[0]}></meta>
         <meta property="og:description" content={cases.description}></meta>

@@ -11,13 +11,27 @@ class PortfolioItem extends React.Component {
     };
   }
 
-  worker(data) {
-    return (
-      <div className="worker">
-        <div className="role">{data.role}</div>
-        <div className="person">{data.person}</div>
-      </div>
-    );
+  worker(team) {
+    const result = [];
+    let row = [];
+    for (let i = 0; i < team.length; i++) {
+      if (i !== 0 && i % 3 === 0) {
+        result.push(<tr>{row}</tr>);
+        row = [];
+      }
+      row.push(
+        <td valign="top">
+          <div className="worker">
+            <div className="role">{team[i].role}</div>
+            <div className="person">{team[i].person}</div>
+          </div>
+        </td>
+      );
+    }
+    if (row.length > 0) {
+      result.push(<tr>{row}</tr>);
+    }
+    return result;
   }
 
   paragraphs(info) {
@@ -57,25 +71,26 @@ class PortfolioItem extends React.Component {
 
   getContent() {
     if (this.state.loaded) {
-      const workersInfo = this.state.info.team.map((worker) => {
-        return this.worker(worker);
-      });
+      const workersInfo = this.worker(this.state.info.team);
       return (
-        <div>
+        <div className="portfolio-item-container">
           <BackgroundVideo
             isPortfolioItem={true}
             mainText={this.state.info.name}
             img={this.state.info.photos[0]}
-            ids={this.state.info.videos}
-          ></BackgroundVideo>
+            ids={this.state.info.videos}></BackgroundVideo>
           <div className="portfolio-item-info">
             <div className="portfolio-item-description">
               {this.paragraphs(this.state.info.description)}
             </div>
-            <div className="roles">{workersInfo}</div>
+            <div className="roles">
+              <table>{workersInfo}</table>
+            </div>
           </div>
           <div className="portfolio-item-photos">
-              <Photo url={this.state.info.photos[0]}></Photo>
+            {this.state.info.photos.map((item, index) => {
+              return <Photo url={item}></Photo>;
+            })}
           </div>
         </div>
       );
