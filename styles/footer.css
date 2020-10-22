@@ -102,6 +102,7 @@ td {
   .footer-top p {
     margin-bottom: 3.375vw;
     justify-self: flex-end;
+    font-size: 4.0625vw;
   }
 
   .footer-line {
@@ -110,6 +111,7 @@ td {
 
   .social img {
     height: 11.5625vw;
+    width: 11.5625vw;
   }
 
   .social{
@@ -123,5 +125,9 @@ td {
     flex-direction: column;
     width: 70%;
     margin-bottom: 8.75vw;
+  }
+
+  .footer-bottom p,a {
+    font-size: 3.125vw;
   }
 }
