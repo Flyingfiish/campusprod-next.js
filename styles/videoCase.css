@@ -114,7 +114,7 @@
   font-size: 1.0416vw;
 }
 
-.videoCaseHead p{
+.videoCaseHead p {
   font-size: 0.78125vw;
   margin-top: 1.302vw;
   color: lightgray;
@@ -250,9 +250,21 @@
     padding: 0;
   }
 
+  .videoCaseHead h3 {
+    font-size: 3.125vw;
+  }
+
+  .videoCaseHead p {
+    font-size: 2.1875vw;
+  }
+
   .watchCase {
     padding: 0;
-    font-size: 7px;
+  }
+
+  .watchCase p {
+    font-size: 2.1875vw;
+    font-weight: 500;
   }
 
   .showCase {
@@ -260,7 +272,8 @@
   }
 
   .showCase p {
-    font-size: 7px;
+    font-size: 2.1875vw;
+    font-weight: 500;
   }
 
   .videocaseContent {

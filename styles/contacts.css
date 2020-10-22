@@ -14,17 +14,17 @@
 .contacts-info {
   display: flex;
   justify-content: center;
-  margin-top: 56px;
+  margin-top: 2.916vw;
   color: white;
 }
 
 .contacts-info table {
-  margin-left: 100px;
+  margin-left: 5.20833vw;
 }
 
 .contacts-info p {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 1.0416vw;
+  margin-bottom: 1.5625vw;
 }
 
 .contacts h1 {
@@ -50,14 +50,19 @@
   justify-content: center;
 }
 
+.contact-map{
+  width: 27.760vw;
+  height: 27.760vw;
+}
+
 @media screen and (max-width: 850px) {
   .contacts h1 {
     margin-top: 35vw;
-    font-size: 35px;
+    font-size: 10.9375vw;
   }
 
   .contacts img {
-    margin-top: 90px;
+    margin-top: 28.125vw;
     height: 38.4vw;
   }
 
@@ -66,14 +71,14 @@
   }
 
   .contacts-info p {
-    font-size: 8px;
-    margin: 10px 0;
+    font-size: 2.5vw;
+    margin: 3.125vw 0;
     
   }
 
   .contacts-info b {
-    font-size: 11px;
-    margin-right: 10px;
+    font-size: 3.4375vw;
+    margin-right: 3.125vw;
   }
 
   .contacts-info table {
