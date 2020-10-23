@@ -9,8 +9,8 @@
 }
 
 #trailer img {
-  width: 100%;
-  height: 56.2vw;
+  object-fit: cover;
+  width: 100vw;
 }
 
 .layout {

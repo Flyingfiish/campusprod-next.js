@@ -1,9 +1,9 @@
 .videoCase {
   color: white;
   text-decoration: none;
-  margin-bottom: 1.0416vw;
+  margin-bottom: 1.25vw;
   position: relative;
-  border-radius: 1.0416vw;
+  border-radius: 0.520833vw;
   overflow: hidden;
   transition: all 0.2s ease-out;
 }
@@ -153,17 +153,22 @@
 .date {
   color: #888888;
   font-size: 1.0416vw;
+  margin-bottom: 1.04166vw;
 }
 
 .name {
   font-size: 1.30208vw;
   font-weight: bold;
   text-decoration: underline;
+  text-underline-offset: 10px;
+  margin-bottom: 1.25vw;
+  line-height: 1.5;
 }
 
 .description {
   font-size: 1.0416vw;
   font-weight: normal;
+  line-height: 2.1;
 }
 
 .ReactModal__Overlay {
@@ -219,12 +224,12 @@
   }
 
   .leftColumn .videocase-buttons {
-    margin-top: 3vw;
+    margin-top: 4.6875vw;
     align-items: flex-start;
   }
 
   .rightColumn .videocase-buttons {
-    margin-top: 3vw;
+    margin-top: 4.6875vw;
     align-items: flex-start;
   }
 
@@ -233,16 +238,16 @@
   }
 
   .videoCase {
-    border-radius: 3px;
-    margin-bottom: 5px;
+    border-radius: 0.9375vw;
+    margin-bottom: 1.5625vw;
   }
 
   .videoCaseHead h3 {
-    font-size: 10px;
+    font-size: 3.125vw;
   }
 
   .videoCaseHead p {
-    font-size: 7px;
+    font-size: 2.1875vw;
     display: none;
   }
 

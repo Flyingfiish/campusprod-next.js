@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Modal from "react-modal";
 import VideoSelector from "./videoSelector";
+import { getTag } from "./../utils/getTag";
 
 class VideoCase extends React.Component {
   state = {
@@ -21,14 +22,17 @@ class VideoCase extends React.Component {
   video = (<VideoSelector links={this.props.data.videos}></VideoSelector>);
 
   description = () => {
-    if (this.props.bottomPanel)
+    if (this.props.bottomPanel) {
+      const date = new Date(this.props.data.createdAt);
       return (
-        <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data._id}>
+        <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data.id}>
           <a
             title="PortfolioItem"
             style={{ textDecoration: "none", color: "black" }}>
-            <p className="date">27 июля</p>
-            <p className="name">{this.props.data.name}</p>
+            <p className="date">
+              {date.toLocaleString("ru", { day: "numeric", month: "long" })}
+            </p>
+            <p className="name videoCase-width">{this.props.data.name}</p>
             {this.props.isDescription && (
               <p className="description videoCase-width">
                 {this.props.data.description[0]}
@@ -37,6 +41,7 @@ class VideoCase extends React.Component {
           </a>
         </Link>
       );
+    }
   };
 
   render() {
@@ -74,7 +79,7 @@ class VideoCase extends React.Component {
       );
     } else {
       button = (
-        <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data._id}>
+        <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data.id}>
           <a
             className="showCase"
             style={{ textDecoration: "none", color: "white" }}
@@ -177,11 +182,16 @@ class VideoCase extends React.Component {
             <div className="videocase-buttons">
               <Link
                 href="/portfolio/[id]"
-                as={"/portfolio/" + this.props.data._id}>
+                as={"/portfolio/" + this.props.data.id}>
                 <a title="PortfolioItem" style={{ textDecoration: "none" }}>
                   <div className="videoCaseHead">
                     <h3>{this.props.data.name}</h3>
-                    <p>{this.props.data.description[0]}</p>
+                    <p>
+                      {this.props.data.types.map((tag, index) => {
+                        if (index === 0) return getTag(tag);
+                        else return ", " + getTag(tag);
+                      })}
+                    </p>
                   </div>
                 </a>
               </Link>

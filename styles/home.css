@@ -104,6 +104,10 @@
     height: 31.25vw;
   }
 
+  .top-videoCase .videoCaseHead p{
+    display: flex;
+  }
+
   .left-column-first-videoCase .videoCase {
     height: 53.4375vw;
   }
