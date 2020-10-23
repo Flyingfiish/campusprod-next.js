@@ -2,7 +2,9 @@ import Head from "next/head";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Home from "../components/home";
-import { getVideoCases } from "../lib/getvideocasesbyid";
+//import { getVideoCases } from "../lib/getvideocasesbyid";
+
+import { getEntries } from "./../lib/contentful";
 
 export default function HomeRoute({ cases, loaded }) {
   return (
@@ -40,21 +42,15 @@ export default function HomeRoute({ cases, loaded }) {
 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts
+  const entries = await getEntries();
+  //entries.map((entry) => console.log(entry.name));
 
-  const res = await getVideoCases([
-    "5f4f802368e6231368cf0b85",
-    "5f4f802368e6231368cf0b7e",
-    "5f4f802368e6231368cf0b8b",
-  ]);
-
-  let cases = [];
+  let cases = entries;
   let loaded = false;
 
-  if (res) {
-    cases = JSON.parse(res);
+  if (cases.length > 0) {
     loaded = true;
   }
-
   // By returning { props: posts }, the Blog component
   // will receive `posts` as a prop at build time
   return {

@@ -25,18 +25,18 @@ class Home extends React.Component {
               <VideoCase data={this.props.cases[2]} isMain={false}></VideoCase>
             </div>
             <div className="standart-video-case">
-              <VideoCase data={this.props.cases[0]} isMain={false}></VideoCase>
+              <VideoCase data={this.props.cases[3]} isMain={false}></VideoCase>
             </div>
           </div>
           <div className="rightColumn">
             <div className="right-column-first-videoCase">
-              <VideoCase data={this.props.cases[1]} isMain={false}></VideoCase>
+              <VideoCase data={this.props.cases[4]} isMain={false}></VideoCase>
             </div>
             <div className="right-column-second-videoCase">
-              <VideoCase data={this.props.cases[2]} isMain={false}></VideoCase>
+              <VideoCase data={this.props.cases[0]} isMain={false}></VideoCase>
             </div>
             <div className="standart-video-case">
-              <VideoCase data={this.props.cases[1]} isMain={false}></VideoCase>
+              <VideoCase data={this.props.cases[0]} isMain={false}></VideoCase>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import Portfolio from "../../components/portfolio";
 import Head from "next/head";
-import { findVideoCases } from "../../lib/findvideocases";
+import { getEntries } from "../../lib/contentful";
 
 export default function PortfolioRoute({ cases, loaded, found }) {
   return (
@@ -32,15 +32,15 @@ export default function PortfolioRoute({ cases, loaded, found }) {
   );
 }
 
-export async function getStaticProps() {
-  const res = await findVideoCases();
+export async function getServerSideProps() {
 
-  let cases = [];
+  const entries = await getEntries();
+
+  let cases = entries;
   let loaded = false;
   let found = false;
 
-  if (res) {
-    cases = JSON.parse(res);
+  if (cases.length > 0) {
     loaded = true;
     found = true;
   }

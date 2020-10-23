@@ -15,6 +15,7 @@ class Portfolio extends React.Component {
       cases: this.props.cases,
       loaded: this.props.loaded,
       found: this.props.found,
+      foundedCases: this.props.cases,
     };
   }
 
@@ -43,6 +44,42 @@ class Portfolio extends React.Component {
         tags.push(item[0]);
       }
     });
+
+    if (tags.length > 0) {
+      const cases = this.state.cases;
+      const foundedCases = cases.filter((videoCase) => {
+        for (let i = 0; i < tags.length; i++) {
+          if (videoCase.types.includes(tags[i])) return true;
+        }
+      });
+      if (foundedCases.length > 0) {
+        this.setState({
+          foundedCases: foundedCases,
+          loaded: true,
+          found: true,
+        });
+      } else {
+        this.setState({
+          found: false,
+        });
+      }
+    } else {
+      this.setState({
+        found: true,
+        loaded: true,
+        foundedCases: this.state.cases,
+      });
+    }
+  }
+
+  /*fuindVideoCases() {
+    this.setState({ loaded: false });
+    let tags = [];
+    types.forEach((item) => {
+      if (this.state[item[0]]) {
+        tags.push(item[0]);
+      }
+    });
     let params = {
       method: "POST",
       mode: "same-origin",
@@ -60,7 +97,7 @@ class Portfolio extends React.Component {
           const cases = JSON.parse(result);
           console.log(cases.length);
           if (cases.length > 0) {
-            this.setState({ cases: cases, loaded: true, found: true });
+            this.setState({ foundedCases: cases, loaded: true, found: true });
           } else {
             this.setState({
               found: false,
@@ -69,22 +106,20 @@ class Portfolio extends React.Component {
         });
       }
     });
-  }
+  }*/
 
   getVideoCases() {
     if (this.state.loaded & this.state.found) {
       let videoCases = [];
-      this.state.cases.forEach((item, index) =>
+      this.state.foundedCases.forEach((item, index) =>
         videoCases.push(
           <div
             key={index}
-            className={index % 6 === 0 ? "main-videocase" : "little-videocase"}
-          >
+            className={index % 6 === 0 ? "main-videocase" : "little-videocase"}>
             <VideoCase
               bottomPanel={true}
               isDescription={index % 6 === 0 ? true : false}
-              data={item}
-            ></VideoCase>
+              data={item}></VideoCase>
           </div>
         )
       );
@@ -92,8 +127,7 @@ class Portfolio extends React.Component {
     } else if (!this.state.found) {
       return (
         <div
-          style={{ display: "flex", justifyContent: "center", margin: "50px" }}
-        >
+          style={{ display: "flex", justifyContent: "center", margin: "50px" }}>
           <h2>Ничего не найдено</h2>
         </div>
       );
@@ -117,8 +151,7 @@ class Portfolio extends React.Component {
               ? "order-type-button checked"
               : "order-type-button"
           }
-          onClick={() => this.handleChangeType.call(this, item[0])}
-        >
+          onClick={() => this.handleChangeType.call(this, item[0])}>
           <div className="order-type-button-hover"></div>
           <p>{item[1]}</p>
         </div>
@@ -126,10 +159,8 @@ class Portfolio extends React.Component {
     });
     return (
       <div>
-        <div className="portfolio-margin" ></div>
-        <div
-          className="portfolio-head"
-        >
+        <div className="portfolio-margin"></div>
+        <div className="portfolio-head">
           <h1>Портфолио</h1>
           <p id="works-amount">532 работы</p>
 

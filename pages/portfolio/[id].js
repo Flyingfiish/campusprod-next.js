@@ -1,7 +1,8 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
-import { getVideoCases } from "../../lib/getvideocasesbyid";
-import { getAllIds } from "../../lib/getallids";
+//import { getVideoCases } from "../../lib/getvideocasesbyid";
+import { getEntry } from "../../lib/contentful";
+//import { getAllIds } from "../../lib/getallids";
 import PortfolioItem from "../../components/portfolioItem";
 import Head from "next/head";
 
@@ -31,14 +32,15 @@ export default function PortfolioItemRoute({ cases, loaded }) {
   );
 }
 
-export async function getStaticProps({ params }) {
-  const res = await getVideoCases([params.id]);
+export async function getServerSideProps({ params }) {
+  const entry = await getEntry(params.id);
 
-  let cases = [];
+  let cases = entry;
   let loaded = false;
 
-  if (res) {
-    cases = JSON.parse(res)[0];
+  console.log(cases.description);
+
+  if (cases) {
     loaded = true;
   }
   console.log(cases);
@@ -49,26 +51,5 @@ export async function getStaticProps({ params }) {
       cases,
       loaded,
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const res = await getAllIds();
-
-  let paths = [];
-  let loaded = false;
-
-  if (res) {
-    paths = JSON.parse(res);
-    loaded = true;
-  }
-
-  return {
-    paths: paths.map((item) => {
-      return {
-        params: { id: item._id },
-      };
-    }),
-    fallback: false,
   };
 }

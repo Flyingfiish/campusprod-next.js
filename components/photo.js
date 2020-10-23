@@ -16,7 +16,7 @@ class Photo extends React.Component {
   render() {
     return (
       <div
-        className={"photo"}
+        className="photo"
         onClick={() => this.handleModal()}>
         <img src={this.props.url} alt="portfolio-item-photo"></img>
         <Modal
