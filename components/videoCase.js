@@ -86,7 +86,7 @@ class VideoCase extends React.Component {
             title="PortfolioItem">
             <p>Посмотреть кейс</p>
             <svg
-              className="play-button"
+              className="play-button case-arrow"
               style={{ marginLeft: "10px" }}
               xmlns="http://www.w3.org/2000/svg"
               width="42.644"

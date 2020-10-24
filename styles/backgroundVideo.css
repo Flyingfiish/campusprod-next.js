@@ -1,5 +1,5 @@
 .is_overlay {
-  height: 56.2vw;
+  height: 100vh;
   background-color: black;
 }
 
@@ -11,6 +11,7 @@
 #trailer img {
   object-fit: cover;
   width: 100vw;
+  height: 100vh;
 }
 
 .layout {
@@ -46,10 +47,11 @@
 }
 
 .about-text {
-  font-size: 25px;
-  width: 580px;
+  font-size: 1.302vw;
+  width: 30.208333vw;
   text-align: center;
-  margin-bottom: 160px;
+  margin-bottom: 8.33333vw;
+  line-height: 2.01;
 }
 
 .main-text {
@@ -63,7 +65,7 @@
 }
 
 .main-container {
-  margin-top: 20.5vw;
+  margin-top: 36.5831vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +87,7 @@
 }
 
 .play-section {
-  margin-top: 45.2vw;
+  margin-top: 80.5942vh;
   position: absolute;
 }
 
@@ -94,9 +96,10 @@
 }
 
 .scroll-arrow{
-  width: 67px;
+  width: 3.4895833vw;
+  height: 0.7552vw;
   position: absolute;
-  margin-top: 51.51vw;
+  margin-top: 89.9721vh;
   cursor: pointer;
 }
 

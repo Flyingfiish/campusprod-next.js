@@ -70,7 +70,7 @@
 }
 
 .main-videocase .videoCase-width {
-  width: 64.5vw;
+  max-width: 64.5vw;
 }
 
 .main-videocase .videoCase {
@@ -83,7 +83,7 @@
 }
 
 .little-videocase .videoCase-width {
-  width: 31.66vw;
+  max-width: 31.66vw;
 }
 
 .little-videocase .videoCase {
@@ -95,6 +95,10 @@
 
 .order-type-button-hover {
   width: 100%;
+}
+
+.portfolio-content{
+  margin-bottom: 3.306733vw;
 }
 
 @media screen and (max-width: 850px) {

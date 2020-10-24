@@ -66,7 +66,7 @@
 .order-type-button {
   margin: 0.781vw 0.781vw 0 0;
   height: 2.448vw;
-  border: #cccccc solid 2px;
+  border: #cccccc solid 1px;
   border-radius: 1.25vw;
   display: inline-block;
   cursor: pointer;
@@ -74,6 +74,7 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  transition: 86ms;
 }
 
 .order-type-button p {
@@ -83,16 +84,15 @@
   width: auto;
   padding: 0 1.562vw;
   margin: 0;
-  line-height: 2.239vw;
+  line-height: 2.4479166vw;
   display: flex;
   overflow: hidden;
-  transition: 0.2s linear;
 }
 
 .checked {
   background-color: #003cff;
   color: white;
-  border: #003cff 2px solid;
+  border: #003cff 1px solid;
 }
 
 .order-type-button-hover {
@@ -106,15 +106,13 @@
 }
 
 .order-type-button:hover .order-type-button-hover {
-  transform: scaleX(1.1);
 }
 
 .order-type-button:hover {
-  border: #003cff 2px solid;
+  border: #003cff 1px solid;
 }
 
 .order-type-button:hover p {
-  color: white;
 }
 
 .checked p {

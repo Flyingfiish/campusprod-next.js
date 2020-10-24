@@ -52,6 +52,10 @@
   margin: 0;
 }
 
+.case-arrow{
+  height: 0.7609375vw;
+}
+
 .showCase p {
   font-size: 0.78125vw;
 }
@@ -159,16 +163,16 @@
 .name {
   font-size: 1.30208vw;
   font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 10px;
-  margin-bottom: 1.25vw;
+  border-bottom: 1px solid #888888;
+  margin-bottom: 0.86vw;
   line-height: 1.5;
+  width: max-content;
 }
 
 .description {
   font-size: 1.0416vw;
   font-weight: normal;
-  line-height: 2.1;
+  line-height: 2;
 }
 
 .ReactModal__Overlay {

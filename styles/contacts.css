@@ -1,5 +1,6 @@
 .contacts {
   background-color: black;
+  height: 100vh;
 }
 
 .contacts img {
@@ -7,7 +8,6 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  height: 22.7vw;
   object-fit: cover;
 }
 
@@ -51,8 +51,8 @@
 }
 
 .contact-map{
-  width: 27.760vw;
-  height: 27.760vw;
+  width: 49.35vh;
+  height: 49.35vh;
 }
 
 @media screen and (max-width: 850px) {
