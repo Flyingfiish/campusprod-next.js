@@ -35,14 +35,14 @@
 .rightColumn {
   width: 50%;
   float: right;
-  padding-left: 0.52083vw;
+  padding-left: 0.625vw;
   box-sizing: border-box;
 }
 
 .leftColumn {
   width: 50%;
   float: left;
-  padding-right: 0.52083vw;
+  padding-right: 0.625vw;
   box-sizing: border-box;
 }
 

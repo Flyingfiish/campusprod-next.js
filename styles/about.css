@@ -10,13 +10,14 @@
 
 .person-box b {
   margin-top: 2.6041vw;
-  font-size: 1.3020vw;
+  font-size: 1.302vw;
 }
 
 .person-box p {
   font-size: 1.0416vw;
-  margin-top: 1.0416vw;
+  margin-top: 0.9vw;
   width: 23.489vw;
+  line-height: 1.9;
 }
 
 .persons-description {
@@ -57,13 +58,13 @@
 
 .first p {
   font-size: 1.0416vw;
-  width: 26.9270vw;
+  width: 26.927vw;
   line-height: 2.6041vw;
   margin-top: 3.3854vw;
   margin-left: 46.25vw;
   padding-bottom: 8.75vw;
 }
-.step-number-margin{
+.step-number-margin {
   height: 13.6979vw;
 }
 
@@ -144,7 +145,7 @@
   padding-bottom: 8.75vw;
 }
 
-.third-margin{
+.third-margin {
   height: 17.0833vw;
 }
 
@@ -154,11 +155,11 @@
 }
 
 @media screen and (max-width: 850px) {
-  .about p{
+  .about p {
     font-size: 7px;
   }
 
-  .persons-description b{
+  .persons-description b {
     font-size: 7px;
   }
 }

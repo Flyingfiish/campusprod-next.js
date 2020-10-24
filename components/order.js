@@ -177,8 +177,8 @@ class Order extends React.Component {
       <div
         style={{
           fontSize: "14px",
-          color: "red",
-          fontWeight: "lighter",
+          color: "#FE0202",
+          fontWeight: "normal",
           marginTop: "10px",
         }}>
         {text}
