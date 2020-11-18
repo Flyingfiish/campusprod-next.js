@@ -1,3 +1,11 @@
+.portfolio-content .showCase, .watchCase {
+  padding: 0 0 3.4375vw 3.385vw;
+}
+
+.portfolio-content .videoCaseHead{
+  padding: 2.6vw 3.385vw 0 3.385vw;
+}
+
 .videoCase {
   color: white;
   text-decoration: none;
@@ -52,7 +60,7 @@
   margin: 0;
 }
 
-.case-arrow{
+.case-arrow {
   height: 0.7609375vw;
 }
 

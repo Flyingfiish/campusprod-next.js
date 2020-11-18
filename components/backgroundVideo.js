@@ -118,9 +118,9 @@ class BackgroundVideo extends React.Component {
                 transform="translate(631.612 1714.191) rotate(135)"
                 fill="rgba(0,0,0,0)"
                 stroke="#fff"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
               />
               <line
                 id="Line_2"
