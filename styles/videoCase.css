@@ -205,6 +205,10 @@
   pointer-events: none;
 }
 
+.hidden-desc{
+  display: none;
+}
+
 @media screen and (max-width: 850px) {
   .videoCaseHover:hover img {
     transform: scale3d(1, 1, 1);

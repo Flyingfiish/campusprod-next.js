@@ -76,6 +76,7 @@ class Order extends React.Component {
   async handleMakeOrder() {
     this.setState({ serverError: false });
     this.setState({ requestSucceess: false });
+    this.clearErrors();
     const companyName = document.getElementById("companyName").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
@@ -117,6 +118,7 @@ class Order extends React.Component {
       } else {
         this.setState({ requestSucceess: true });
         this.setState({ isSended: true });
+        this.clearErrors();
       }
       this.handleModal();
     }
@@ -332,10 +334,7 @@ class Order extends React.Component {
                       touched.clientName &&
                       errors.clientName}
                   </div>
-                  <div
-                    className="makeOrder"
-                    onClick={handleSubmit}
-                  >
+                  <div className="makeOrder" onClick={handleSubmit}>
                     <Button text="Оставить заявку" fontWeight="500"></Button>
                   </div>
                   {serverError}
@@ -348,7 +347,6 @@ class Order extends React.Component {
             style={{
               backgroundImage: "url(/sand.jpg)",
               backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >

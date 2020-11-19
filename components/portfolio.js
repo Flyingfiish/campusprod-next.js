@@ -3,9 +3,10 @@ import VideoCase from "./videoCase";
 const types = [
   ["imageVideo", "Имиджевое видео"],
   ["websiteDesign", "Дизайн сайта"],
+  ["printedDesign", "Печатный дизайн"],
   ["packaging", "Упаковка"],
   ["interface", "Интерфейс"],
-  ["printedDesign", "Печатный дизайн"],
+  
 ];
 
 class Portfolio extends React.Component {
@@ -115,11 +116,13 @@ class Portfolio extends React.Component {
         videoCases.push(
           <div
             key={index}
-            className={index % 6 === 0 ? "main-videocase" : "little-videocase"}>
+            className={index % 6 === 0 ? "main-videocase" : "little-videocase"}
+          >
             <VideoCase
               bottomPanel={true}
               isDescription={index % 6 === 0 ? true : false}
-              data={item}></VideoCase>
+              data={item}
+            ></VideoCase>
           </div>
         )
       );
@@ -127,7 +130,8 @@ class Portfolio extends React.Component {
     } else if (!this.state.found) {
       return (
         <div
-          style={{ display: "flex", justifyContent: "center", margin: "50px" }}>
+          style={{ display: "flex", justifyContent: "center", margin: "50px" }}
+        >
           <h2>Ничего не найдено</h2>
         </div>
       );
@@ -151,7 +155,8 @@ class Portfolio extends React.Component {
               ? "order-type-button checked"
               : "order-type-button"
           }
-          onClick={() => this.handleChangeType.call(this, item[0])}>
+          onClick={() => this.handleChangeType.call(this, item[0])}
+        >
           <div className="order-type-button-hover"></div>
           <p>{item[1]}</p>
         </div>

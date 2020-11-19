@@ -102,24 +102,19 @@
 }
 
 @media screen and (max-width: 850px) {
-  .little-videocase {
-    margin: 20px;
-  }
 
   .little-videocase .videoCase-width {
     width: 93.7vw;
+    max-width: 100vw;
   }
 
   .little-videocase .videoCase {
     height: 55vw;
   }
 
-  .main-videocase {
-    margin: 20px;
-  }
-
   .main-videocase .videoCase-width {
     width: 93.7vw;
+    max-width: 100vw;
   }
 
   .main-videocase .videoCase {
@@ -170,18 +165,22 @@
   }
 
   .portfolio-content {
-    margin: 0;
+    margin: 0 0 9.375vw 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 
   .main-videocase {
     margin-top: 3.1vw;
+    margin-left: 0;
   }
 
   .little-videocase {
     margin-top: 3.1vw;
+    margin-left: 0;
   }
 
   .portfolio-margin {
@@ -190,5 +189,9 @@
 
   .portfolio-content .videoCaseHover {
     pointer-events: none;
+  }
+
+  .portfolio-content .hidden-desc{
+    display: flex;
   }
 }
