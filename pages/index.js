@@ -40,7 +40,7 @@ export default function HomeRoute({ cases, loaded }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // Call an external API endpoint to get posts
   const entries = await getEntries();
   //entries.map((entry) => console.log(entry.name));
