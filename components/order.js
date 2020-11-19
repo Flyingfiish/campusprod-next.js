@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "./button";
-import { withStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
 import { Modal } from "@material-ui/core";
 import { withRouter } from "next/router";
 import emailjs from "emailjs-com";
+import { Formik } from "formik";
+import * as Yup from "yup";
 
 const errorTypes = {
   companyNameEmpty: "Введите название вашей компании.",
@@ -24,23 +24,26 @@ const types = [
   ["printedDesign", "Печатный дизайн"],
 ];
 
-let underlineColor = "#41B444";
-
-const CssTextField = withStyles({
-  root: {
-    width: "100%",
-    marginTop: "20px",
-    "& label.Mui-focused": {
-      color: "#CCCCCC",
-    },
-    "& label": {
-      color: "#CCCCCC",
-    },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: underlineColor,
-    },
-  },
-})(TextField);
+const FormSchema = Yup.object().shape({
+  companyName: Yup.string()
+    .min(2, "Слишком короткое.")
+    .max(100, "Слишком длинное.")
+    .required("Необходимо заполнить."),
+  email: Yup.string()
+    .max(100, "Слишком длинный.")
+    .email("Неправильный формат e-mail.")
+    .required("Необходимо заполнить."),
+  phone: Yup.string()
+    .max(15, "Слишком длинный.")
+    .matches(
+      /^((8|\+374|\+994|\+995|\+375|\+7|\+380|\+38|\+996|\+998|\+993)[\- ]?)?\(?\d{3,5}\)?[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}[\- ]?\d{1}(([\- ]?\d{1})?[\- ]?\d{1})?$/,
+      "Неправильный формат номера."
+    )
+    .required("Необходимо заполнить."),
+  clientName: Yup.string()
+    .max(100, "Слишком длинное.")
+    .required("Необходимо заполнить."),
+});
 
 class Order extends React.Component {
   state = {
@@ -51,12 +54,6 @@ class Order extends React.Component {
     printedDesign: false,
 
     serverError: false,
-    companyNameEmptyError: false,
-    emailEmptyError: false,
-    emailWrongFormatError: false,
-    phoneEmptyError: false,
-    phoneWrongFormatError: false,
-    clientNameEmptyError: false,
     projectTypeEmptyError: false,
     requestSucceess: false,
     isModalOpen: false,
@@ -76,66 +73,19 @@ class Order extends React.Component {
     }
   }
 
-  validateEmail(email) {
-    const re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
-    return re.test(email);
-  }
-
-  validatePhone(phone) {
-    const re = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-    return re.test(phone);
-  }
-
-  clearErrors() {
-    this.setState({
-      companyNameEmptyError: false,
-      emailEmptyError: false,
-      emailWrongFormatError: false,
-      phoneEmptyError: false,
-      phoneWrongFormatError: false,
-      clientNameEmptyError: false,
-      projectTypeEmptyError: false,
-    });
-  }
-
   async handleMakeOrder() {
     this.setState({ serverError: false });
     this.setState({ requestSucceess: false });
-    this.clearErrors();
     const companyName = document.getElementById("companyName").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
-    const clientName = document.getElementById("name").value;
+    const clientName = document.getElementById("clientName").value;
     let projectTypes = [];
     types.forEach((item) => {
       if (this.state[item[0]]) projectTypes.push(item[1]);
     });
     let error = false;
 
-    if (companyName === "") {
-      this.setState({ companyNameEmptyError: true });
-      error = true;
-    }
-    if (email === "") {
-      this.setState({ emailEmptyError: true });
-      error = true;
-    }
-    if (!this.validateEmail(email)) {
-      this.setState({ emailWrongFormatError: true });
-      error = true;
-    }
-    if (phone === "") {
-      this.setState({ phoneEmptyError: true });
-      error = true;
-    }
-    if (!this.validatePhone(phone)) {
-      this.setState({ phoneWrongFormatError: true });
-      error = true;
-    }
-    if (clientName === "") {
-      this.setState({ clientNameEmptyError: true });
-      error = true;
-    }
     if (projectTypes.length === 0) {
       this.setState({
         projectTypeEmptyError: true,
@@ -172,6 +122,12 @@ class Order extends React.Component {
     }
   }
 
+  clearErrors() {
+    this.setState({
+      projectTypeEmptyError: false,
+    });
+  }
+
   error = (text) => {
     return (
       <div
@@ -180,7 +136,8 @@ class Order extends React.Component {
           color: "#FE0202",
           fontWeight: "normal",
           marginTop: "10px",
-        }}>
+        }}
+      >
         {text}
       </div>
     );
@@ -200,6 +157,8 @@ class Order extends React.Component {
   }
 
   render() {
+    //##########################################################################################################
+
     let serverError = "";
     if (this.state.serverError)
       serverError = (
@@ -229,7 +188,8 @@ class Order extends React.Component {
               ? "order-type-button checked"
               : "order-type-button"
           }
-          onClick={() => this.handleChangeType.call(this, item[0])}>
+          onClick={() => this.handleChangeType.call(this, item[0])}
+        >
           <div className="order-type-button-hover"></div>
           <p>{item[1]}</p>
         </div>
@@ -253,7 +213,8 @@ class Order extends React.Component {
             open={false}
             children={result}
             isOpen={this.state.isModalOpen}
-            onClose={() => this.handleModal()}></Modal>
+            onClose={() => this.handleModal()}
+          ></Modal>
           <div className="leftColumn">
             {close}
             <h2 className="blue">Оставить заявку</h2>
@@ -275,52 +236,112 @@ class Order extends React.Component {
                 ? this.error(errorTypes.projectTypeEmpty)
                 : null}
             </div>
-            <div className="input-fields">
-              <CssTextField
-                id="companyName"
-                label="Название компании"
-                fullWidth={true}
-                margin={"dense"}></CssTextField>
-              {this.state.companyNameEmptyError
-                ? this.error(errorTypes.companyNameEmpty)
-                : null}
-              <CssTextField
-                id="email"
-                label="Электронная почта"
-                fullWidth={true}
-                margin={"dense"}></CssTextField>
-              {this.state.emailEmptyError
-                ? this.error(errorTypes.emailEmpty)
-                : null}
-              {this.state.emailWrongFormatError
-                ? this.error(errorTypes.emailWrongFormat)
-                : null}
-              <CssTextField
-                id="phone"
-                label="Телефон или мессенджер"
-                fullWidth={true}
-                margin={"dense"}></CssTextField>
-              {this.state.phoneEmptyError
-                ? this.error(errorTypes.phoneEmpty)
-                : null}
-              {this.state.phoneWrongFormatError
-                ? this.error(errorTypes.phoneWrongFormat)
-                : null}
-              <CssTextField
-                id="name"
-                label="Имя"
-                fullWidth={true}
-                margin={"dense"}></CssTextField>
-              {this.state.clientNameEmptyError
-                ? this.error(errorTypes.clientNameEmpty)
-                : null}
-            </div>
-            <div
-              className="makeOrder"
-              onClick={() => this.handleMakeOrder.call(this)}>
-              <Button text="Оставить заявку" fontWeight="500"></Button>
-            </div>
-            {serverError}
+
+            <Formik
+              initialValues={{
+                companyName: "",
+                email: "",
+                phone: "",
+                clientName: "",
+              }}
+              validationSchema={FormSchema}
+              onSubmit={() => this.handleMakeOrder.call(this)}
+            >
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+                isSubmitting,
+                /* and other goodies */
+              }) => (
+                <form onSubmit={handleSubmit} className="input-fields">
+                  <div className="input-data">
+                    <input
+                      id="companyName"
+                      name="companyName"
+                      type="text"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.companyName}
+                      required
+                    ></input>
+                    <div
+                      className={
+                        "underline" + true
+                          ? " underline-error"
+                          : " underline-correct"
+                      }
+                    ></div>
+                    <label>Название компании</label>
+                  </div>
+                  <div className="error-text">
+                    {errors.companyName &&
+                      touched.companyName &&
+                      errors.companyName}
+                  </div>
+                  <div className="input-data">
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.email}
+                      required
+                    ></input>
+                    <div className="underline"> </div>
+                    <label>Электронная почта</label>
+                  </div>
+                  <div className="error-text">
+                    {errors.email && touched.email && errors.email}
+                  </div>
+                  <div className="input-data">
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="text"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.phone}
+                      required
+                    ></input>
+                    <div className="underline"> </div>
+                    <label>Телефон или любой удобный мессенджер</label>
+                  </div>
+                  <div className="error-text">
+                    {errors.phone && touched.phone && errors.phone}
+                  </div>
+                  <div className="input-data">
+                    <input
+                      id="clientName"
+                      name="clientName"
+                      type="text"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.clientName}
+                      required
+                    ></input>
+                    <div className="underline"> </div>
+                    <label>Имя</label>
+                  </div>
+                  <div className="error-text">
+                    {errors.clientName &&
+                      touched.clientName &&
+                      errors.clientName}
+                  </div>
+                  <div
+                    className="makeOrder"
+                    onClick={handleSubmit}
+                  >
+                    <Button text="Оставить заявку" fontWeight="500"></Button>
+                  </div>
+                  {serverError}
+                </form>
+              )}
+            </Formik>
           </div>
           <div
             className="rightColumn company"
@@ -329,7 +350,8 @@ class Order extends React.Component {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
-            }}>
+            }}
+          >
             <b>CAMPUS</b>
           </div>
         </div>

@@ -98,9 +98,9 @@ class VideoCase extends React.Component {
                   transform="translate(41.937 7.307) rotate(135)"
                   fill="rgba(0,0,0,0)"
                   stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1"
                 />
                 <line
                   x2="10.334"

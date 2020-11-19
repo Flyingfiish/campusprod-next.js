@@ -39,7 +39,6 @@ class Header extends React.Component {
       }
       logoStyle = { textDecoration: "none", color: "white" };
     }
-    console.log(activeStyle);
     return (
       <header
         style={backgroundStyle}
