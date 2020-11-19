@@ -219,7 +219,7 @@ class Order extends React.Component {
           ></Modal>
           <div className="leftColumn">
             {close}
-            <h2 className="blue">Оставить заявку</h2>
+            <h2 className="blue-h">Оставить заявку</h2>
             <p className="order-description">
               За 4 года было реализовано более 100 проектов: рекламные видео,
               музыкальные клипы, дизайны сайтов, оформление социальных сетей.

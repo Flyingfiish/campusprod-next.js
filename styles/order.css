@@ -7,7 +7,7 @@
 }
 
 .order-description {
-  margin-top: 2.13vw;
+  margin-top: 2vw;
 }
 
 .order-description-2 {
@@ -42,12 +42,14 @@
   color: #cccccc;
   font-size: 0.7291vw;
   line-height: normal;
-  margin-top: 1.718vw;
+  margin-top: 1.5vw;
   margin-bottom: 0.364vw;
   padding: 0;
 }
 
 .company {
+  width: 32.34375vw;
+  padding-left: 0;
   top: 0;
   position: sticky;
   height: 100vh;
@@ -151,6 +153,11 @@
   cursor: pointer;
 }
 
+.blue-h {
+  font-size: 2.2916vw;
+  color: #003cff;
+}
+
 @media screen and (max-width: 850px) {
   .order-form p {
     font-size: 3.125vw;
@@ -163,6 +170,11 @@
   .order-close {
     top: 7.5vw;
     right: 7.5vw;
+  }
+
+  .blue-h {
+    justify-self: flex-start;
+    align-self: flex-start;
   }
 
   .blue {
@@ -190,13 +202,11 @@
 
   .order-type-button:hover .order-type-button-hover {
     transform: scaleX(0);
-    
   }
 
-  .order-type-button:hover{
+  .order-type-button:hover {
     border: #003cff 2px solid;
   }
-
 
   .order-type-button p {
     font-size: 2.5vw;
