@@ -105,14 +105,8 @@
   background: #003cff;
 }
 
-.order-type-button:hover .order-type-button-hover {
-}
-
 .order-type-button:hover {
   border: #003cff 1px solid;
-}
-
-.order-type-button:hover p {
 }
 
 .checked p {
@@ -121,64 +115,6 @@
 
 *::selection {
   background: rgb(224, 224, 224);
-}
-
-.text-field {
-  width: 100%;
-  position: relative;
-  height: 2.60416vw;
-  margin-bottom: 20px;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.text-field input {
-  width: 100%;
-  height: 100%;
-  padding-top: 15px;
-  border: none;
-  outline: none;
-}
-
-.text-field label {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-bottom: 2px #707070 solid;
-  color: #cccccc;
-}
-
-.text-field label::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-bottom: 3px solid #41b444;
-  left: 0px;
-  bottom: -2px;
-  transform: translateX(-100%);
-  transition: all 0.3s ease;
-}
-
-.text-field-content {
-  position: absolute;
-  bottom: 5px;
-  left: 0px;
-  transition: all 0.3s ease;
-  font-size: 13px;
-}
-
-.text-field input:focus + .text-field-label-name .text-field-content,
-.text-field input:valid + .text-field-label-name .text-field-content {
-  transform: translateY(-140%);
-}
-
-.text-field input:focus + .text-field-label-name::after,
-.text-field input:valid + .text-field-label-name::after {
-  transform: translateX(0%);
 }
 
 .input-fields {
@@ -212,6 +148,7 @@
   top: 1.9vw;
   cursor: pointer;
 }
+
 @media screen and (max-width: 850px) {
 
   .order-content h2{
@@ -279,6 +216,7 @@
 
   .input-fields {
     margin: 0;
+    width: 100%;
   }
 
   .order .leftColumn {

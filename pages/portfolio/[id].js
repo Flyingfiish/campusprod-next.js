@@ -38,12 +38,10 @@ export async function getServerSideProps({ params }) {
   let cases = entry;
   let loaded = false;
 
-  console.log(cases.description);
 
   if (cases) {
     loaded = true;
   }
-  console.log(cases);
   // By returning { props: posts }, the Blog component
   // will receive `posts` as a prop at build time
   return {

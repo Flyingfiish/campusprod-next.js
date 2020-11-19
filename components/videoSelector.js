@@ -149,7 +149,6 @@ class VideoSelector extends React.Component {
   }
 
   setClassNames() {
-    console.log(this.props.links.length);
     for (let i = 0; i < this.props.links.length; i++) {
       if (i === 0) {
         this.classNames.push("");
