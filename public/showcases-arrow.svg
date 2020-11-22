@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43.145" height="16.028" viewBox="0 0 43.145 16.028">
+    <g transform="translate(0.5 0.707)">
+        <line y2="10.334" transform="translate(41.937 7.307) rotate(135)" fill="rgba(0,0,0,0)" stroke="#000"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+        <line x2="10.334" transform="translate(41.937 7.307) rotate(135)" fill="rgba(0,0,0,0)" stroke="#000"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+        <path d="M-3918.03,1531h-41.937" transform="translate(3959.967 -1523.692)" fill="rgba(0,0,0,0)" stroke="#000"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+    </g>
+</svg>

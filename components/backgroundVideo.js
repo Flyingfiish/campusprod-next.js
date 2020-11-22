@@ -25,6 +25,16 @@ class BackgroundVideo extends React.Component {
     else this.setState({ isModalOpen: true });
   }
 
+  handleScroll() {
+    window.scroll({
+      top:
+        document.documentElement.clientHeight -
+        5.625 * document.documentElement.clientWidth / 100,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+
   video = (<VideoSelector links={this.props.ids}></VideoSelector>);
 
   render() {
@@ -50,26 +60,30 @@ class BackgroundVideo extends React.Component {
             justifyContent: "center",
             cursor: "pointer",
           }}
-          onClick={() => this.handleModal()}>
+          onClick={() => this.handleModal()}
+        >
           <svg
             className="play-button"
             style={{ marginRight: "10px" }}
             xmlns="http://www.w3.org/2000/svg"
             width="67"
             height="67"
-            viewBox="0 0 67 67">
+            viewBox="0 0 67 67"
+          >
             <g data-name="Group 60" transform="translate(-834 -891)">
               <path
                 fill="#fff"
                 d="M14 0l14 24H0z"
                 data-name="Polygon 1"
-                transform="rotate(90 -13.5 897.5)"></path>
+                transform="rotate(90 -13.5 897.5)"
+              ></path>
               <g
                 fill="none"
                 stroke="#fff"
                 strokeWidth="1"
                 data-name="Ellipse 6"
-                transform="translate(834 891)">
+                transform="translate(834 891)"
+              >
                 <circle cx="33.5" cy="33.5" r="33.5" stroke="none"></circle>
                 <circle cx="33.5" cy="33.5" r="33"></circle>
               </g>
@@ -98,15 +112,18 @@ class BackgroundVideo extends React.Component {
           {playStop}
           <div className="about-text">{aboutText}</div>
           <svg
+            onClick={this.handleScroll.bind(this)}
             className="scroll-arrow"
             xmlns="http://www.w3.org/2000/svg"
             width="30.413"
             height="15.913"
-            viewBox="0 0 30.413 15.913">
+            viewBox="0 0 30.413 15.913"
+          >
             <g
               id="Group_64"
               data-name="Group 64"
-              transform="translate(1729.398 -616.406) rotate(90)">
+              transform="translate(1729.398 -616.406) rotate(90)"
+            >
               <line
                 id="Line_1"
                 data-name="Line 1"
@@ -174,7 +191,8 @@ class BackgroundVideo extends React.Component {
             for (let i = 0; i < foo.length; i++) {
               foo[i].classList.add("pointer-events-none");
             }
-          }}>
+          }}
+        >
           {this.video}
         </Modal>
       </div>

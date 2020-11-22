@@ -217,7 +217,7 @@ class Order extends React.Component {
             isOpen={this.state.isModalOpen}
             onClose={() => this.handleModal()}
           ></Modal>
-          <div className="leftColumn">
+          <div className="order-leftColumn">
             {close}
             <h2 className="blue-h">Оставить заявку</h2>
             <p className="order-description">
@@ -343,7 +343,7 @@ class Order extends React.Component {
             </Formik>
           </div>
           <div
-            className="rightColumn company"
+            className="company"
             style={{
               backgroundImage: "url(/sand.jpg)",
               backgroundRepeat: "no-repeat",

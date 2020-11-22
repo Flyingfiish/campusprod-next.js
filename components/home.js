@@ -55,7 +55,8 @@ class Home extends React.Component {
           ids={["https://www.youtube.com/embed/Dpslkx3X7k0"]}
           mainText="Сделай красиво ежжи!"
           secondaryText="Выполнили 454 проектов"
-          className="video"></BackgroundVideo>
+          className="video"
+        ></BackgroundVideo>
 
         <div className="wrapper">
           {this.getVideoCases()}
@@ -64,17 +65,41 @@ class Home extends React.Component {
               <a className="watch-all-cases">
                 <p>Посмотреть все кейсы</p>
                 <svg
-                  style={{ marginTop: "5px", marginLeft: "10px" }}
+                  style={{ marginLeft: "01.51vw" }}
                   xmlns="http://www.w3.org/2000/svg"
-                  enableBackground="new 0 0 15.698 8.706"
-                  version="1.1"
-                  viewBox="0 0 15.698 8.706"
-                  xmlSpace="preserve"
-                  width="41"
-                  height="20">
-                  <path
-                    fill="#000"
-                    d="M11.354 0L10.646 0.706 13.786 3.853 0 3.853 0 4.853 13.786 4.853 10.646 8 11.354 8.706 15.698 4.353z"></path>
+                  width="43.145"
+                  height="16.028"
+                  viewBox="0 0 43.145 16.028"
+                >
+                  <g transform="translate(0.5 0.707)">
+                    <line
+                      y2="10.334"
+                      transform="translate(41.937 7.307) rotate(135)"
+                      fill="rgba(0,0,0,0)"
+                      stroke="#000"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1"
+                    />
+                    <line
+                      x2="10.334"
+                      transform="translate(41.937 7.307) rotate(135)"
+                      fill="rgba(0,0,0,0)"
+                      stroke="#000"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1"
+                    />
+                    <path
+                      d="M-3918.03,1531h-41.937"
+                      transform="translate(3959.967 -1523.692)"
+                      fill="rgba(0,0,0,0)"
+                      stroke="#000"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                    />
+                  </g>
                 </svg>
               </a>
             </Link>
