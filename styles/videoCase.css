@@ -212,6 +212,7 @@
 @media screen and (max-width: 850px) {
   .videoCaseHover:hover img {
     transform: scale3d(1, 1, 1);
+    
   }
 
   .play-button {
@@ -228,6 +229,7 @@
     transition: 0.2s;
     left: -100%;
     top: -100%;
+    background: rgba(0, 0, 0, 0.4);
   }
 
   .videocase-buttons {

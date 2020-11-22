@@ -16,7 +16,7 @@ header {
   background: rgba(0, 0, 0, 1);
 }
 
-.makeOrder {
+header .makeOrder {
   color: white;
   width: 11.0416vw;
   height: 2.4479vw;

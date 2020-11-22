@@ -28,8 +28,7 @@ class BackgroundVideo extends React.Component {
   handleScroll() {
     window.scroll({
       top:
-        document.documentElement.clientHeight -
-        5.625 * document.documentElement.clientWidth / 100,
+        (0.5 * document.documentElement.clientHeight),
       left: 0,
       behavior: "smooth",
     });

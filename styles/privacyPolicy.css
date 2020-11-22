@@ -7,7 +7,7 @@
 
 .provacy-wrapper {
   width: 63%;
-  font-size: 20px;
+  font-size: 1.0416vw;
 }
 
 .provacy-wrapper p,
@@ -20,7 +20,7 @@ h2 {
 }
 
 .provacy-wrapper h2 {
-  font-size: 30px;
+  font-size: 1.5625vw;
   font-weight: 600;
   margin-bottom: 2.6vw;
 }
@@ -28,7 +28,7 @@ h2 {
 .provacy-wrapper h1 {
   margin-top: 5.2vw;
   margin-bottom: 5.2vw;
-  font-size: 44px;
+  font-size: 2.2916vw;
   font-weight: 600;
   color: black;
 }

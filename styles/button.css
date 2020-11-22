@@ -5,16 +5,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #003cff;
   border-radius: 24px;
   cursor: pointer;
   transition: all 0.3s ease;
-  
+  overflow: hidden;
   
 }
 
-.button-text{
+.button-text {
+  width: 100%;
+  height: 100%;
   text-align: center;
   font-weight: normal;
   padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-sended {
+  background-color: #4eca52;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.button-loading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button-loading img {
+  width: 25px;
+  height: 25px;
+}
+
+.button-loading div {
+  margin-left: 10px;
 }

@@ -167,7 +167,65 @@
   box-sizing: border-box;
 }
 
+.order-modal-children {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.order-modal-children p{
+  padding: 0;
+}
+
+.order-modal-children .order-thx{
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.order-modal-children .order-thx2{
+  font-size: 14px;
+}
+
+.order .modal {
+  height: auto;
+}
+
+.order-modal-children img {
+}
+
+.order-modal-close{
+  display: none;
+}
+
 @media screen and (max-width: 850px) {
+  .order-modal-children .order-thx{
+    margin-top: 8.125vw;
+    font-size: 4.375vw;
+  }
+  
+  .order-modal-children .order-thx2{
+    margin-top: 3.125vw;
+    font-size: 3.125vw;
+  }
+  .order .modal {
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .order-modal-close{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    display: initial;
+  }
+
   .order-form p {
     font-size: 3.125vw;
   }
@@ -243,6 +301,8 @@
   .input-fields {
     margin: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .order-leftColumn {
@@ -260,7 +320,15 @@
   }
 
   .makeOrder {
+    width: 66.25vw;
     margin-top: 9.375vw;
     margin-bottom: 9.375vw;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-fields .input-data{
+    margin-top: 4.6875vw;
   }
 }

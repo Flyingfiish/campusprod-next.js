@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./button";
-import { Modal } from "@material-ui/core";
+import Modal from "./modal";
 import { withRouter } from "next/router";
 import emailjs from "emailjs-com";
 import { Formik } from "formik";
@@ -59,6 +59,7 @@ class Order extends React.Component {
     isModalOpen: false,
 
     isSended: false,
+    isLoading: false,
   };
 
   handleChangeType(type) {
@@ -74,6 +75,7 @@ class Order extends React.Component {
   }
 
   async handleMakeOrder() {
+    this.setState({ isLoading: true });
     this.setState({ serverError: false });
     this.setState({ requestSucceess: false });
     this.clearErrors();
@@ -119,9 +121,10 @@ class Order extends React.Component {
         this.setState({ requestSucceess: true });
         this.setState({ isSended: true });
         this.clearErrors();
+        this.handleModal();
       }
-      this.handleModal();
     }
+    this.setState({ isLoading: false });
   }
 
   clearErrors() {
@@ -156,6 +159,21 @@ class Order extends React.Component {
   handleModal() {
     if (this.state.isModalOpen === true) this.setState({ isModalOpen: false });
     else this.setState({ isModalOpen: true });
+  }
+
+  getModalChildren() {
+    return (
+      <div className="order-modal-children">
+        <img src="order-success.svg"></img>
+        <p className="order-thx">Спасибо за заявку!</p>
+        <p className="order-thx2">Мы свяжемся с вами в ближайшее время</p>
+        <img
+          onClick={() => this.handleModal()}
+          className="order-modal-close"
+          src="close.svg"
+        ></img>
+      </div>
+    );
   }
 
   render() {
@@ -197,9 +215,7 @@ class Order extends React.Component {
         </div>
       );
     });
-    let result = <div></div>;
-    if (this.state.requestSucceess) result = this.success();
-    else if (this.state.serverError) result = this.serverError();
+
     let close = <div></div>;
     if (this.props.standAlone) {
       close = (
@@ -213,7 +229,7 @@ class Order extends React.Component {
         <div className="order-content">
           <Modal
             open={false}
-            children={result}
+            children={this.getModalChildren()}
             isOpen={this.state.isModalOpen}
             onClose={() => this.handleModal()}
           ></Modal>
@@ -256,8 +272,6 @@ class Order extends React.Component {
                 handleChange,
                 handleBlur,
                 handleSubmit,
-                isSubmitting,
-                /* and other goodies */
               }) => (
                 <form onSubmit={handleSubmit} className="input-fields">
                   <div className="input-data">
@@ -335,9 +349,13 @@ class Order extends React.Component {
                       errors.clientName}
                   </div>
                   <div className="makeOrder" onClick={handleSubmit}>
-                    <Button text="Оставить заявку" fontWeight="500"></Button>
+                    <Button
+                      text="Оставить заявку"
+                      isLoading={this.state.isLoading}
+                      isSended={this.state.isSended}
+                      fontWeight="500"
+                    ></Button>
                   </div>
-                  {serverError}
                 </form>
               )}
             </Formik>
