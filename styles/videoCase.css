@@ -258,7 +258,6 @@
   .videoCase {
     border-radius: 0.9375vw;
     margin-bottom: 1.5625vw;
-    margin-bottom: 15px;
   }
 
   .videoCaseHead h3 {
@@ -304,6 +303,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+  }
+
+  .date{
+    margin-top: 14px;
   }
 
   .date,
