@@ -80,6 +80,14 @@ td {
 }
 
 @media screen and (max-width: 850px) {
+  .footer-mobile-column {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .footer-mobile-column p {
+    margin: 0;
+  }
   .footer-top {
     font-size: 5vw;
     flex-direction: column;
@@ -114,10 +122,12 @@ td {
     width: 11.5625vw;
   }
 
-  .social{
-      display: flex;
-      justify-content: space-between;
-      width: 57.8125vw;
+  .social {
+    margin-top: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 57.8125vw;
   }
 
   .footer-bottom {
@@ -127,7 +137,8 @@ td {
     margin-bottom: 8.75vw;
   }
 
-  .footer-bottom p,a {
+  .footer-bottom p,
+  a {
     font-size: 3.125vw;
   }
 }

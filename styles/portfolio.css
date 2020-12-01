@@ -128,7 +128,8 @@
   }
 
   .portfolio-head h1 {
-    font-size: 35px;
+    margin-top: 10.9375vw;
+    font-size: 10.9375vw;
     color: white;
   }
 
@@ -184,7 +185,7 @@
   }
 
   .portfolio-margin {
-    height: 90px;
+    height: 28.128vw;
   }
 
   .portfolio-content .videoCaseHover {

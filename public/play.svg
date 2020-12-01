@@ -1,7 +1,10 @@
-<svg id="Group_141" data-name="Group 141" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <path id="Polygon_1" data-name="Polygon 1" d="M5.621,1.623a1,1,0,0,1,1.759,0l4.821,8.9A1,1,0,0,1,11.321,12H1.679A1,1,0,0,1,.8,10.524Z" transform="translate(24 10) rotate(90)" fill="#fff"/>
-  <g id="Ellipse_6" data-name="Ellipse 6" fill="none" stroke="#fff" stroke-width="1">
-    <circle cx="16" cy="16" r="16" stroke="none"/>
-    <circle cx="16" cy="16" r="15.5" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="67" height="67"
+  viewBox="0 0 67 67">
+  <g data-name="Group 60" transform="translate(-834 -891)">
+    <path fill="#fff" d="M14 0l14 24H0z" data-name="Polygon 1" transform="rotate(90 -13.5 897.5)"></path>
+    <g fill="none" stroke="#fff" strokeWidth="1" data-name="Ellipse 6" transform="translate(834 891)">
+      <circle cx="33.5" cy="33.5" r="33.5" stroke="none"></circle>
+      <circle cx="33.5" cy="33.5" r="33"></circle>
+    </g>
   </g>
 </svg>

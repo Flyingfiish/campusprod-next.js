@@ -230,6 +230,11 @@
     font-size: 3.125vw;
   }
 
+  .order-form{
+    padding-left: 2.1875vw;
+    padding-right: 2.1875vw;
+  }
+
   .order-content h2 {
     margin-top: 7.8125vw;
     font-size: 5.3125vw;
@@ -242,6 +247,7 @@
   .blue-h {
     justify-self: flex-start;
     align-self: flex-start;
+    padding-left: 2.1875vw;
   }
 
   .blue {

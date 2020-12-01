@@ -215,7 +215,7 @@
     
   }
 
-  .play-button {
+  .watchCase .play-button {
     width: 7.8125vw;
     height: 7.8125vw;
   }
@@ -258,6 +258,7 @@
   .videoCase {
     border-radius: 0.9375vw;
     margin-bottom: 1.5625vw;
+    margin-bottom: 15px;
   }
 
   .videoCaseHead h3 {

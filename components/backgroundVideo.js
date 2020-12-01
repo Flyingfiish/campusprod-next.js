@@ -61,40 +61,15 @@ class BackgroundVideo extends React.Component {
           }}
           onClick={() => this.handleModal()}
         >
-          <svg
-            className="play-button"
-            style={{ marginRight: "10px" }}
-            xmlns="http://www.w3.org/2000/svg"
-            width="67"
-            height="67"
-            viewBox="0 0 67 67"
-          >
-            <g data-name="Group 60" transform="translate(-834 -891)">
-              <path
-                fill="#fff"
-                d="M14 0l14 24H0z"
-                data-name="Polygon 1"
-                transform="rotate(90 -13.5 897.5)"
-              ></path>
-              <g
-                fill="none"
-                stroke="#fff"
-                strokeWidth="1"
-                data-name="Ellipse 6"
-                transform="translate(834 891)"
-              >
-                <circle cx="33.5" cy="33.5" r="33.5" stroke="none"></circle>
-                <circle cx="33.5" cy="33.5" r="33"></circle>
-              </g>
-            </g>
-          </svg>
+          <img src="play.svg" className="play-button"></img>
+          
           <p className="play-button-text">{playButtonName}</p>
         </div>
       );
 
     return (
       <div id="trailer" className="is_overlay" style={{}}>
-        <img src={this.props.img} alt="background"></img>
+        <img src={this.props.img} className="background-img" alt="background"></img>
         <div className="layout">
           {this.props.isMain && (
             <div className="main-container">
