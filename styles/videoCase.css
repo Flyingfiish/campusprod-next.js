@@ -221,6 +221,17 @@
 
 @media screen and (max-width: 850px) {
 
+  .home .videocase-buttons a, .videoCaseHead{
+    height: 100%;
+  }
+
+  .top-videoCase .videoCaseHead{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   .portfolio .videoCase-link-mobile{
     position: absolute;
     width: 100%;
