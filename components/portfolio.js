@@ -163,7 +163,7 @@ class Portfolio extends React.Component {
       );
     });
     return (
-      <div>
+      <div className="portfolio">
         <div className="portfolio-margin"></div>
         <div className="portfolio-head">
           <h1>Портфолио</h1>
