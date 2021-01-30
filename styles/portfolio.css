@@ -192,6 +192,10 @@
     pointer-events: none;
   }
 
+  .portfolio-content .videocase-buttons a{
+    display: none;
+  }
+
   .portfolio-content .hidden-desc{
     display: block;
   }

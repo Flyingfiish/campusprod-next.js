@@ -141,78 +141,89 @@ class VideoCase extends React.Component {
       : "https://www.tokkoro.com/picsup/2953277-digital-art-minimalism-simple-background-sun-circle-lines-orange___abstract-wallpapers.jpg";
     return (
       <div>
-          <div className="videoCase videoCaseHover videoCase-width">
-            <Modal
-              style={{
-                overlay: {
-                  position: "fixed",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  backgroundColor: "rgba(0, 0, 0, 0.4)",
-                },
-                content: {
-                  position: "absolute",
-                  zIndex: "9999",
-                  background: "#000",
-                  overflow: "hidden",
-                  WebkitOverflowScrolling: "touch",
+        <Link href="/portfolio/[id]" as={"/portfolio/" + this.props.data.id}>
+            <a
+              className="videoCase-link-mobile"
+              title="PortfolioItem"
+              style={{ textDecoration: "none" }}
+            ></a>
+          </Link>
+        <div className="videoCase videoCaseHover videoCase-width">
+          
+          <Modal
+            style={{
+              overlay: {
+                position: "fixed",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+              },
+              content: {
+                position: "absolute",
+                zIndex: "9999",
+                background: "#000",
+                overflow: "hidden",
+                WebkitOverflowScrolling: "touch",
 
-                  outline: "none",
-                  padding: "0",
-                  top: "50%",
-                  left: "50%",
-                  right: "auto",
-                  bottom: "auto",
-                  marginRight: "-50%",
-                  transform: "translate(-50%, -50%)",
-                  boxShadow: "0px 29px 114px 24px rgba(0, 0, 0, 0.75)",
-                },
-              }}
-              className="react-modal"
-              isOpen={this.state.isModalOpen}
-              onRequestClose={() => this.handleModal()}
-              onAfterClose={() => {
-                let foo = document.querySelectorAll(".videoCase");
-                for (let i = 0; i < foo.length; i++) {
-                  foo[i].classList.remove("pointer-events-none");
-                }
-              }}
-              onAfterOpen={() => {
-                let foo = document.querySelectorAll(".videoCase");
-                for (let i = 0; i < foo.length; i++) {
-                  foo[i].classList.add("pointer-events-none");
-                }
-              }}
-            >
-              {this.video}
-            </Modal>
-            <img alt="videocase cover" src={photo}></img>
-            <div className="videocaseContent">
-              <div className="dark-thing"></div>
-              <div className="videocase-buttons">
-                <Link
-                  href="/portfolio/[id]"
-                  as={"/portfolio/" + this.props.data.id}
-                >
-                  <a title="PortfolioItem" style={{ textDecoration: "none" }}>
-                    <div className="videoCaseHead">
-                      <h3>{this.props.data.name}</h3>
-                      <p>
-                        {this.props.data.types.map((tag, index) => {
-                          if (index === 0) return getTag(tag);
-                          else return ", " + getTag(tag);
-                        })}
-                      </p>
-                    </div>
-                  </a>
-                </Link>
-                <div className="panel">{button}</div>
-              </div>
+                outline: "none",
+                padding: "0",
+                top: "50%",
+                left: "50%",
+                right: "auto",
+                bottom: "auto",
+                marginRight: "-50%",
+                transform: "translate(-50%, -50%)",
+                boxShadow: "0px 29px 114px 24px rgba(0, 0, 0, 0.75)",
+              },
+            }}
+            className="react-modal"
+            isOpen={this.state.isModalOpen}
+            onRequestClose={() => this.handleModal()}
+            onAfterClose={() => {
+              let foo = document.querySelectorAll(".videoCase");
+              for (let i = 0; i < foo.length; i++) {
+                foo[i].classList.remove("pointer-events-none");
+              }
+            }}
+            onAfterOpen={() => {
+              let foo = document.querySelectorAll(".videoCase");
+              for (let i = 0; i < foo.length; i++) {
+                foo[i].classList.add("pointer-events-none");
+              }
+            }}
+          >
+            {this.video}
+          </Modal>
+
+          <img alt="videocase cover" src={photo}></img>
+
+          <div className="videocaseContent">
+            <div className="dark-thing"></div>
+            <div className="videocase-buttons">
+              <Link
+                href="/portfolio/[id]"
+                as={"/portfolio/" + this.props.data.id}
+              >
+                <a title="PortfolioItem" style={{ textDecoration: "none" }}>
+                  <div className="videoCaseHead">
+                    <h3>{this.props.data.name}</h3>
+                    <p>
+                      {this.props.data.types.map((tag, index) => {
+                        if (index === 0) return getTag(tag);
+                        else return ", " + getTag(tag);
+                      })}
+                    </p>
+                  </div>
+                </a>
+              </Link>
+              <div className="panel">{button}</div>
             </div>
           </div>
-          {this.description()}
+        </div>
+
+        {this.description()}
       </div>
     );
   }
