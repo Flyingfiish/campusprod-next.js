@@ -97,21 +97,17 @@ class Order extends React.Component {
     }
 
     if (!error && !this.state.isSended) {
-      const html =
-        "Название компании: " +
-        companyName +
-        "<br>E-Mail: " +
-        email +
-        "<br>Телефон: " +
-        phone +
-        "<br>Имя клиента: " +
-        clientName +
-        "<br>Клиент хочет: " +
-        projectTypes;
       const response = await emailjs.send(
         process.env.EMAILJS_SERVICE_ID,
         process.env.EMAILJS_TEMPLATE_ID,
-        { subject: "Новый заказ", text: html },
+        {
+          subject: "Новый заказ",
+          companyName: companyName,
+          email: email,
+          phone: phone,
+          clientName: clientName,
+          projectTypes: projectTypes
+        },
         process.env.EMAILJS_USER_ID
       );
 

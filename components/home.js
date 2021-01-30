@@ -53,7 +53,7 @@ class Home extends React.Component {
           isMain={true}
           img="main.jpg"
           ids={["https://player.vimeo.com/video/487988774"]}
-          mainText="Сделай красиво ежжи!"
+          mainText="campus"
           secondaryText="Выполнили 454 проектов"
           className="video"
         ></BackgroundVideo>
