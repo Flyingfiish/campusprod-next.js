@@ -13,6 +13,10 @@
   font-size: 1.19vw;
 }
 
+.portfolio-item-description p{
+  line-height: 2;
+}
+
 .worker {
   display: flex;
   justify-content: flex-start;
@@ -59,6 +63,7 @@
 }
 
 .roles {
+  padding-top: 0.5vw;
   margin-left: 38px;
   display: flex;
   flex-direction: row;
@@ -67,6 +72,10 @@
   align-items: flex-start;
   justify-content: flex-start;
   height: auto;
+}
+
+.roles .person{
+  margin-bottom: 1.5625vw;
 }
 
 @media screen and (max-width: 850px) {
@@ -81,6 +90,10 @@
   .portfolio-item-description {
     width: 80vw;
     
+  }
+
+  .portfolio-item-description p{
+    line-height: 2;
   }
   .roles table {
     width: 76.5vw;
@@ -115,12 +128,11 @@
 
   .portfolio-item-info p {
     font-size: 4.0625vw;
-    line-height: normal;
   }
 
   .portfolio-item-info .role {
     font-size: 4.0625vw;
-    margin: 7.8125vw 0 0 0;
+    margin: 4.6vw 0 0 0;
     width: 100%;
   }
   .portfolio-item-info .person {

@@ -39,7 +39,7 @@ class About extends React.Component {
         <div className="first">
           <h1 className="step-number">01</h1>
           <div className='step-number-margin'></div>
-          <b>Как все начиналось</b>
+          <b>Как все началось</b>
 
           <p>
             Все члены команды начинали с фриланса. Кто-то снимал мероприятия.

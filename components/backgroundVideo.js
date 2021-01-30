@@ -61,7 +61,7 @@ class BackgroundVideo extends React.Component {
           }}
           onClick={() => this.handleModal()}
         >
-          <img src="play.svg" className="play-button"></img>
+          <img src="/play.svg" className="play-reel-button"></img>
           
           <p className="play-button-text">{playButtonName}</p>
         </div>

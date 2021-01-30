@@ -138,16 +138,16 @@
     color: white;
   }
   .portfolio-head .order-type-button p {
-    font-size: 8px;
-    line-height: 20px;
-    padding: 0 10px;
+    font-size: 2.5vw;
+    line-height: 6.25vw;
+    padding: 0 3.125vw;
     color: white;
   }
 
   .portfolio-head .order-type-button {
-    height: 24px;
-    border: white solid 2px;
-    margin: 5px 5px 0 0;
+    height: 7.1vw;
+    border: white solid 1px;
+    margin: 1.6vw 1.6vw 0 0;
     background: rgba(255, 255, 255, 0.23);
   }
 
@@ -166,7 +166,7 @@
   }
 
   .portfolio-content {
-    margin: 0 0 9.375vw 0;
+    margin: 0 0 7vw 0;
     padding: 0;
     display: flex;
     flex-direction: column;

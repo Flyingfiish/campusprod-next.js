@@ -2,7 +2,7 @@
   height: 2.083vw;
   width: 100%;
   position: relative;
-  margin: 2.083vw 0 0 0;
+  margin: 28px 0 0 0;
 }
 
 .input-data input {
@@ -12,19 +12,19 @@
   border-bottom: 2px solid #707070;
   font-size: 0.78125vw;
   color: black;
-  padding-left: 1.40625vw;
+  padding-left: 1.6145vw;
 }
 
 .input-data input:valid ~ label,
 .input-data input:focus ~ label {
-  transform: translateY(-1.04166vw);
+  transform: translateY(-1.2vw);
   font-size: 0.677vw;
 }
 
 .input-data label {
   position: absolute;
   bottom: 0.52083vw;
-  left: 1.40625vw;
+  left: 1.6145vw;
   font-size: 0.78125vw;
   color: #cccccc;
   pointer-events: none;

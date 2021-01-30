@@ -236,7 +236,7 @@
   }
 
   .order-content h2 {
-    margin-top: 7.8125vw;
+    margin-top: 5vw;
     font-size: 5.3125vw;
   }
   .order-close {
@@ -245,6 +245,9 @@
   }
 
   .blue-h {
+    color: black;
+    font-size: 5.3125vw;
+    margin-bottom: 3.5vw;
     justify-self: flex-start;
     align-self: flex-start;
     padding-left: 2.1875vw;
@@ -261,7 +264,7 @@
     display: none;
   }
   .order-content {
-    width: 93.7%;
+    width: 95%;
   }
 
   .order-content .order-description,
@@ -270,6 +273,7 @@
   }
 
   .order-content .order-leftColumn {
+    width: 94vw;
   }
 
   .order-type-button:hover .order-type-button-hover {
@@ -288,9 +292,9 @@
   }
 
   .order-type-button {
-    height: 7.5vw;
-    border-radius: 3.75vw;
-    border: #003cff solid 2px;
+    height: 7vw;
+    border-radius: 3.5vw;
+    border: #003cff solid 1px;
     margin: 5px 5px 0 0;
   }
 
@@ -327,7 +331,7 @@
 
   .makeOrder {
     width: 66.25vw;
-    margin-top: 9.375vw;
+    margin-top: 5vw;
     margin-bottom: 9.375vw;
     align-self: center;
     display: flex;

@@ -6,6 +6,7 @@
 #trailer {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 #trailer .background-img {
@@ -37,7 +38,7 @@
 .layout h1 {
   font-size: 5.2vw;
   font-weight: 900;
-  margin: 5px;
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -62,10 +63,11 @@
   font-weight: 500;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .main-container {
-  margin-top: 36.5831vh;
+  margin-top: 36.4814vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,7 +93,7 @@
   position: absolute;
 }
 
-.play-button {
+.play-reel-button {
   width: 3.49vw;
   margin-right: 10px;
 }
@@ -100,11 +102,12 @@
   width: 3.4895833vw;
   height: 0.7552vw;
   position: absolute;
-  margin-top: 1.6275vw;
+  margin-top: 91.574vh;
   cursor: pointer;
 }
 
 @media screen and (max-width: 850px) {
+
   #trailer .background-img {
     height: 177.5vw;
     object-fit: cover;
@@ -116,14 +119,18 @@
 
   .main-container {
     flex-direction: column-reverse;
-    margin-top: 60.625vw;
+    margin-top: 35.5vh;
     width: 80vw;
+  }
+
+  .main-container p{
+    margin-top: 4vh;
   }
 
   .main-text {
     width: 80vw;
     text-transform: uppercase;
-    line-height: 17.8125vw;
+    line-height: 16vw;
     margin: 0;
     padding: 0;
   }
@@ -146,8 +153,12 @@
     margin-top: 145.625vw;
   }
 
+  .play-reel-button{
+    width: 10vw;
+  }
+
   .scroll-arrow {
-    margin-top: 167.75vw;
+    margin-top: 164vw;
     width: 4.0625vw;
     height: 2.1875vw;
     fill: white;

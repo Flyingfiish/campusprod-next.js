@@ -3,7 +3,7 @@
   height: 100vh;
 }
 
-.contacts img {
+.contacts-head-back-desktop {
   opacity: 0.34;
   width: 100%;
   margin: 0;
@@ -20,11 +20,30 @@
 
 .contacts-info table {
   margin-left: 5.20833vw;
+  margin-top: 10.092vh;
 }
 
-.contacts-info p {
+.contacts-info table th, td {
+  text-align: left;
+  width: 18.02vw;
+}
+
+.contacts-info table td {
+  text-align: left;
+  width: 18.02vw;
+}
+
+.contacts-info table td {
+  padding-bottom: 1.5625vw;
+}
+
+.contacts-info table p {
   margin-top: 1.0416vw;
-  margin-bottom: 1.5625vw;
+  font-size: 1.04166vw;
+}
+
+.contacts-info table b {
+  font-size: 1.302vw;
 }
 
 .contacts h1 {
@@ -33,7 +52,7 @@
   color: white;
   font-size: 5.2vw;
   font-weight: 900;
-  margin-top: 10vw;
+  margin-top: 20.18vh;
 }
 
 .contacts-info a {
@@ -46,46 +65,91 @@
 }
 
 .contacts-head {
+  height: 40.3704vh;
   display: flex;
   justify-content: center;
 }
 
-.contact-map{
+.contact-map {
   width: 49.35vh;
   height: 49.35vh;
 }
 
+.contacts-head-back-mobile{
+  display: none;
+}
+
 @media screen and (max-width: 850px) {
+  .contacts-info{
+    margin-top: 3.5vw;
+  }
+
+  .contacts-head-back-desktop{
+    display: none;
+  }
+
+  .contacts {
+    background: white;
+  }
+
   .contacts h1 {
-    margin-top: 35vw;
+    margin-top: 40.9375vw;
     font-size: 10.9375vw;
   }
 
-  .contacts img {
-    margin-top: 28.125vw;
-    height: 38.4vw;
+  .contacts-head-back-mobile {
+    display: initial;
+    height: 66.25vw;
+    width: 100vw;
+    opacity: 1;
   }
 
   .contact-map {
     display: none;
   }
 
-  .contacts-info p {
+  .contacts-info table p {
     font-size: 2.5vw;
     margin: 3.125vw 0;
-    
   }
 
-  .contacts-info b {
-    font-size: 3.4375vw;
+  .contacts-info table a {
+    font-size: 2.5vw;
+  }
+
+  .contacts-info table b {
+    font-size: 3.4vw;
     margin-right: 3.125vw;
   }
 
   .contacts-info table {
     margin: 0;
+    margin-left: 4vw;
   }
 
-  .contacts-info table td{
-      width: auto;
+  .contacts-info table td {
+    width: auto;
+    color: black;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contacts-links a {
+    color: black;
+  }
+
+  .contacts-info table tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-info-icons{
+    width: 12.5vw;
+    height: 12.5vw;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: 3.75vw;
   }
 }

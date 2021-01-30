@@ -33,10 +33,10 @@ class Home extends React.Component {
               <VideoCase data={this.props.cases[4]} isMain={false}></VideoCase>
             </div>
             <div className="right-column-second-videoCase">
-              <VideoCase data={this.props.cases[0]} isMain={false}></VideoCase>
+              <VideoCase data={this.props.cases[5]} isMain={false}></VideoCase>
             </div>
             <div className="standart-video-case">
-              <VideoCase data={this.props.cases[0]} isMain={false}></VideoCase>
+              <VideoCase data={this.props.cases[6]} isMain={false}></VideoCase>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ class Home extends React.Component {
         <BackgroundVideo
           isMain={true}
           img="main.jpg"
-          ids={["https://www.youtube.com/embed/Dpslkx3X7k0"]}
+          ids={["https://player.vimeo.com/video/487988774"]}
           mainText="Сделай красиво ежжи!"
           secondaryText="Выполнили 454 проектов"
           className="video"
