@@ -193,6 +193,6 @@
   }
 
   .portfolio-content .hidden-desc{
-    display: flex;
+    display: block;
   }
 }

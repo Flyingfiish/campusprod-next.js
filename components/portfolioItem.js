@@ -23,7 +23,10 @@ class PortfolioItem extends React.Component {
         <td valign="top">
           <div className="worker">
             <div className="role">{team[i].role}</div>
-            <div className="person">{team[i].person}</div>
+            <div
+              className="person"
+              dangerouslySetInnerHTML={{ __html: team[i].person }}
+            ></div>
           </div>
         </td>
       );
@@ -38,9 +41,11 @@ class PortfolioItem extends React.Component {
     let result = [];
     for (let i = 0; i < info.length; i++) {
       result.push(
-        <p key={i} style={{ marginBottom: "10px" }}>
-          {info[i]}
-        </p>
+        <p
+          key={i}
+          style={{ marginBottom: "10px" }}
+          dangerouslySetInnerHTML={{ __html: info[i] }}
+        ></p>
       );
     }
     return result;
@@ -78,7 +83,8 @@ class PortfolioItem extends React.Component {
             isPortfolioItem={true}
             mainText={this.state.info.name}
             img={this.state.info.photos[0]}
-            ids={this.state.info.videos}></BackgroundVideo>
+            ids={this.state.info.videos}
+          ></BackgroundVideo>
           <div className="portfolio-item-info">
             <div className="portfolio-item-description">
               {this.paragraphs(this.state.info.description)}

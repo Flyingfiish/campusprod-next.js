@@ -184,6 +184,12 @@
   line-height: 1.9;
 }
 
+.description a{
+  font-size: 1.0416vw;
+  font-weight: normal;
+  line-height: 1.9;
+}
+
 .ReactModal__Overlay {
   opacity: 0;
   transition: opacity 500ms;
@@ -211,6 +217,9 @@
 }
 
 @media screen and (max-width: 850px) {
+  .videoCase-desktop-link{
+    display: none;
+  }
 
   .content .panel {
     transform: scale3d(1, 1, 1);
@@ -320,7 +329,12 @@
 
   .date,
   .description {
-    font-size: 13px;
+    font-size: 4.0625vw;
+    color: #888888;
+  }
+
+  .description a{
+    font-size: 4.0625vw;
     color: #888888;
   }
 

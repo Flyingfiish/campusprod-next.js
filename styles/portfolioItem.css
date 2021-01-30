@@ -1,3 +1,7 @@
+.description-link{
+  text-decoration: underline;
+}
+
 .portfolio-item-info {
   display: flex;
   justify-content: center;
@@ -10,6 +14,10 @@
 
 .portfolio-item-description {
   width: 27.65625vw;
+  font-size: 1.19vw;
+}
+
+.portfolio-item-description{
   font-size: 1.19vw;
 }
 
@@ -92,8 +100,13 @@
     
   }
 
+  .portfolio-item-description a{
+    font-size: 4.0625vw;
+  }
+
   .portfolio-item-description p{
     line-height: 2;
+    font-size: 4.0625vw;
   }
   .roles table {
     width: 76.5vw;
